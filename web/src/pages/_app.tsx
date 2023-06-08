@@ -1,18 +1,36 @@
 import type { AppProps } from "next/app";
 import { DefaultSeo } from "next-seo";
+import tw, { styled } from "twin.macro";
 
 import { anime, karasuma } from "@/utility/fonts";
 import GlobalStyles from "@/styles/global";
 import config from "next-seo.config";
+import Nav from "@/components/layout/nav";
+import Footer from "@/components/layout/footer";
+
+import "@/styles/global.css";
+
+const Main = styled.main`
+  ${tw`antialiased w-screen`};
+  ${tw`px-[5.33%] md:(px-[5.21%]) 2xl:(px-0)`};
+  background: url("/images/halftone/diagonal.png"), #40718C;
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-position: fixed;
+  background-repeat: no-repeat;
+  background-opacity: 50%;
+`;
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <DefaultSeo {...config} />
       <GlobalStyles />
-      <main className={`${anime.variable} ${karasuma.variable}`}>
+      <Nav />
+      <Main className={`${anime.variable} ${karasuma.variable}`}>
         <Component {...pageProps} />
-      </main>
+      </Main>
+      <Footer />
     </>
   );
 }

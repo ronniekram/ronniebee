@@ -72,8 +72,8 @@ module.exports = {
         black: 900,
       },
       fontFamily: {
-        sans: [`var(--sans)`, fontFamily.sans],
-        display: [`var(--display)`, fontFamily.display],
+        sans: [`var(--sans)`],
+        display: [`var(--display)`],
       },
       dropShadow: {
         sm: `0px, 2px rgba(33, 33, 33, 0.15)`,
