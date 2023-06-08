@@ -9,7 +9,7 @@ import { DevBurst, CityBurst } from "@/assets/burst";
 
 //! ----------> STYLES <----------
 const Wrapper = styled.section`
-  ${tw`mx-auto w-[fit-content] max-w-[76.75rem] xl:(w-[78%])`};
+  ${tw`mx-auto w-[fit-content] h-[fit-content] max-w-[76.75rem] xl:(w-[78%])`};
   ${tw`flex flex-col justify-center`};
   ${tw`py-32 md:(py-20)`};
 `;

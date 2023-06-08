@@ -12,6 +12,7 @@ import "@/styles/global.css";
 
 const Main = styled.main`
   ${tw`antialiased w-screen min-h-[90vh]`};
+  ${tw`relative z-0`};
   ${tw`px-[5.33%] md:(px-[5.21%]) 2xl:(px-0)`};
   background: url("/images/halftone/diagonal.png"), #40718C;
   background-blend-mode: multiply;

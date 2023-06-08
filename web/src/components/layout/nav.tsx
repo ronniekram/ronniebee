@@ -91,11 +91,11 @@ const Nav = () => {
             />
           </Link>
 
-          <Items>
+          {/* <Items>
             <Link href="/work" prefetch={false}>Work</Link>
             <Link href="/about" prefetch={false}>About</Link>
             <Link href="/contact" prefetch={false}>Contact</Link>
-          </Items>
+          </Items> */}
 
           <div tw="md:(hidden)">
             <Burger
@@ -108,7 +108,7 @@ const Nav = () => {
         </Wrapper>
       </a.div>
 
-        <a.div style={mobileSpring} tw="overflow-hidden fixed">
+        <a.div style={mobileSpring} tw="overflow-hidden fixed z-[100]">
           <Mobile setHeight={setMobileHeight} />
         </a.div>
       </>
