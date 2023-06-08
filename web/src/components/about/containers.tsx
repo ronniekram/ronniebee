@@ -42,6 +42,7 @@ export const Teal = styled(Container)`
   background-position: center;
   background-repeat: no-repeat;
   background-blend-mode: multiply;
+  background-opacity: 70%;
 
   h2 {
     ${tw`text-xl lg:(text-2xl) xl:(text-[28px] leading-[36px])`};

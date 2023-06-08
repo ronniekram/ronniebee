@@ -31,7 +31,7 @@ const Items = styled.nav`
 
   a {
     ${tw`transition duration-300 ease-in-out`};
-    ${tw`hover:(text-gray-500)`};
+    ${tw`hover:(text-red-500)`};
   }
 `;
 
@@ -80,7 +80,7 @@ const Nav = () => {
             href="/"
             prefetch={false}
             aria-label="Home"
-            tw="flex w-[4.875rem] h-[3.125rem] md:(w-[5.8125rem] h-[3.75rem]) xl:(w-[6.3125rem] h-[4.0625rem]) 2xl:(w-[7.25rem] h-[4.6875rem])"
+            tw="transition duration-300 ease-in-out flex w-[4.875rem] h-[3.125rem] md:(w-[5.8125rem] h-[3.75rem]) xl:(w-[6.3125rem] h-[4.0625rem]) 2xl:(w-[7.25rem] h-[4.6875rem]) hover:(scale-[105%])"
           >
             <Image
               src="/images/rb.png"
