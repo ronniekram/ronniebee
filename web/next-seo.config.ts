@@ -14,7 +14,7 @@ const config: DefaultSeoProps = {
     description: `Portfolio website for Ronnie Boniface, a fullstack developer in Pittsburgh, PA`,
     images: [
       {
-        url: `https://github.com/ronniekram/olive-foods/blob/dev/web/public/opengraph.png`,
+        url: `https://raw.githubusercontent.com/ronniekram/ronniebee/dev/web/public/opengraph.png`,
         width: 1200,
         height: 630,
         alt: `ronniebee.dev`,

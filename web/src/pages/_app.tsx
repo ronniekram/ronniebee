@@ -11,7 +11,7 @@ import Footer from "@/components/layout/footer";
 import "@/styles/global.css";
 
 const Main = styled.main`
-  ${tw`antialiased w-screen`};
+  ${tw`antialiased w-screen min-h-[90vh]`};
   ${tw`px-[5.33%] md:(px-[5.21%]) 2xl:(px-0)`};
   background: url("/images/halftone/diagonal.png"), #40718C;
   background-blend-mode: multiply;
