@@ -8,7 +8,7 @@ type Props = {
 
 //! ----------> STYLES <----------
 const Wrapper = styled.div`
-  ${tw`w-full bg-yellow-600 h-[2.5rem] md:(h-[3rem]) xl:(h-[3.75rem]) `};
+  ${tw`w-full bg-yellow-600 h-[2.5rem] md:(h-[3.25rem]) xl:(h-[4.25rem]) `};
   ${tw`flex items-center justify-between`};
   ${tw`px-5 py-2.5 xl:(px-10 py-2.5)`};
   ${tw`font-display font-bold`};
