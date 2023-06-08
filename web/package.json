@@ -25,6 +25,7 @@
     "@types/react-datepicker": "^4.11.2",
     "@types/react-dom": "18.2.1",
     "@visx/text": "^3.0.0",
+    "autoprefixer": "^10.4.14",
     "date-fns": "^2.30.0",
     "eslint": "8.39.0",
     "eslint-config-next": "13.3.2",

@@ -4,11 +4,11 @@ import localFont from "next/font/local";
 export const anime = localFont({
   src: [
     {
-      path: "../../../public/fonts/anime-ace/animeace2_reg.otf",
+      path: "./fonts/anime-ace/regular.otf",
       weight: "400",
     },
     {
-      path: "../../../public/fonts/anime-ace/animeace2_bld.otf",
+      path: "./fonts/anime-ace/bold.otf",
       weight: "700"
     },
   ],
@@ -18,19 +18,19 @@ export const anime = localFont({
 export const karasuma = localFont({
   src: [
     {
-      path: "../../../public/fonts/karasuma/regular.otf",
+      path: "./fonts/karasuma/regular.otf",
       weight: "400",
     },
     {
-      path: "../../../public/fonts/karasuma/medium.otf",
+      path: "./fonts/karasuma/medium.otf",
       weight: "500",
     },
     {
-      path: "../../../public/fonts/karasuma/bold.otf",
+      path: "./fonts/karasuma/bold.otf",
       weight: "700",
     },
     {
-      path: "../../../public/fonts/karasuma/black.otf",
+      path: "./fonts/karasuma/black.otf",
       weight: "900",
     },
   ],

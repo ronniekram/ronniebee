@@ -1,23 +1,23 @@
 import { DefaultSeoProps } from "next-seo";
 
 const config: DefaultSeoProps = {
-  titleTemplate: `%s @ Olive Foods Catering Co.`,
-  title: `We olive food`,
-  description: `Minneapolis - St. Paul Catering & Meal Services`,
-  canonical: `https://olivefoodsco.com`,
+  titleTemplate: `@ ronniebee.dev`,
+  title: `FULLSTACK DEV // PGH, PA`,
+  description: `Portfolio website for Ronnie Boniface, a fullstack developer in Pittsburgh, PA`,
+  canonical: `https://ronniebee.dev`,
   openGraph: {
     type: `website`,
     locale: `en_US`,
-    url: `https://olivefoodsco.com`,
-    title: `We olive food`,
-    siteName: `Olive Foods Catering Company`,
-    description: `Minneapolis - St. Paul Catering & Meal Services`,
+    url: `https://ronniebee.dev`,
+    title: `FULLSTACK DEV // PGH, PA`,
+    siteName: `@ ronniebee.dev`,
+    description: `Portfolio website for Ronnie Boniface, a fullstack developer in Pittsburgh, PA`,
     images: [
       {
         url: `https://github.com/ronniekram/olive-foods/blob/dev/web/public/opengraph.png`,
         width: 1200,
         height: 630,
-        alt: `Olive Foods Catering Company`,
+        alt: `ronniebee.dev`,
         type: `image/png`,
       },
     ],
