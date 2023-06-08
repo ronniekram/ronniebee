@@ -11,7 +11,7 @@ import { Name, PersonalTop, PersonalBottom, Professional, Skills, SkillList, Lig
 const Wrapper = styled.section`
   ${tw`mx-auto w-full max-w-[86rem]`};
   ${tw`flex flex-col space-y-8`};
-  ${tw`py-12 md:(pt-20 pb-40 space-y-10) xl:(pt-28 pb-64 space-y-12) 2xl:(pt-32 pb-72 space-y-14)`};
+  ${tw`py-12 md:(pt-20 pb-40 space-y-10) xl:(pt-28 pb-64 space-y-10) 2xl:(pt-32 pb-72)`};
   ${tw`2xl:(pb-64)`};
 `;
 
