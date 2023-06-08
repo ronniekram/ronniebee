@@ -23,7 +23,7 @@ const Right = styled.div`
   ${tw`w-[71%] h-full`};
   ${tw`bg-red-500 font-display font-bold`};
   ${tw`text-white text-[28px]`};
-  ${tw`flex flex-col space-y-24`};
+  ${tw`flex flex-col-reverse justify-start space-y-24`};
   ${tw`px-8 pt-16 pb-24`};
   ${tw`border-l-[3px] border-white`};
 
@@ -51,12 +51,12 @@ const Mobile = ({ setHeight }: { setHeight: (height: number) => void }) => {
       <Left />
       <Right>
         <div>
-          <nav>
+          {/* <nav>
             <Link href="/" prefetch={false}>Home</Link>
             <Link href="/about" prefetch={false}>About</Link>
             <Link href="/work" prefetch={false}>Work</Link>
             <Link href="/contact" prefetch={false}>Contact</Link>
-          </nav>
+          </nav> */}
 
           <div tw="flex items-end justify-end space-x-5 pt-10">
             <a href="https://github.com/ronniekram" target="_blank" rel="noreferrer" aria-label="Github">
