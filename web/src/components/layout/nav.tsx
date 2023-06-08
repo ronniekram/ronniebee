@@ -17,9 +17,9 @@ import Mobile from "./mobile";
 const Wrapper = styled.section`
   ${tw`w-full max-w-[86rem] mx-auto bg-white text-grey-600`};
   ${tw`antialiased font-bold`};
-  ${tw`text-2xl xl:(text-[30px])`};
+  ${tw`text-2xl xl:(text-[28px] leading-[36px])`};
   ${tw`px-[5.3%] md:(px-[5.2%]) 2xl:(px-0)`};
-  ${tw`py-2.5 md:(py-3)`};
+  ${tw`py-2.5 md:(py-3) xl:(py-5)`};
   ${tw`flex items-center justify-between`};
   ${tw`drop-shadow-sm md:(drop-shadow-md)`};
 `;
@@ -27,11 +27,11 @@ const Wrapper = styled.section`
 const Items = styled.nav`
   ${tw`hidden font-display`};
   ${tw`md:(flex items-center)`};
-  ${tw`space-x-8 xl:(space-x-12)`};
+  ${tw`space-x-8 xl:(space-x-10)`};
 
   a {
     ${tw`transition duration-300 ease-in-out`};
-    ${tw`hover:(text-gray-500)`};
+    ${tw`hover:(text-red-500)`};
   }
 `;
 
@@ -80,7 +80,7 @@ const Nav = () => {
             href="/"
             prefetch={false}
             aria-label="Home"
-            tw="flex w-[4.875rem] h-[3.125rem] md:(w-[5.8125rem] h-[3.75rem]) xl:(w-[7.25rem] h-[4.6875rem])"
+            tw="transition duration-300 ease-in-out flex w-[4.875rem] h-[3.125rem] md:(w-[5.8125rem] h-[3.75rem]) xl:(w-[6.3125rem] h-[4.0625rem]) 2xl:(w-[7.25rem] h-[4.6875rem]) hover:(scale-[105%])"
           >
             <Image
               src="/images/rb.png"
@@ -91,11 +91,11 @@ const Nav = () => {
             />
           </Link>
 
-          {/* <Items>
+          <Items>
             <Link href="/work" prefetch={false}>Work</Link>
             <Link href="/about" prefetch={false}>About</Link>
             <Link href="/contact" prefetch={false}>Contact</Link>
-          </Items> */}
+          </Items>
 
           <div tw="md:(hidden)">
             <Burger

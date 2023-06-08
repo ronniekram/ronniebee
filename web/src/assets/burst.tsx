@@ -1,6 +1,6 @@
 export const DevBurst = () => (
   <svg width="100%" height="100%" viewBox="0 0 525 426" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <g clip-path="url(#clip0_212_54472)">
+    <g clipPath="url(#clip0_212_54472)">
     <mask id="mask0_212_54472" style={{ maskType: `luminance` }} maskUnits="userSpaceOnUse" x="0" y="0" width="525" height="426">
     <path d="M524.482 0.706299H0.017334V425.706H524.482V0.706299Z" fill="#FFFDF5"/>
     </mask>
@@ -404,7 +404,7 @@ export const DevBurst = () => (
 
 export const CityBurst = () => (
   <svg width="100%" height="100%" viewBox="0 0 250 203" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <g clip-path="url(#clip0_212_54863)">
+    <g clipPath="url(#clip0_212_54863)">
     <mask id="mask0_212_54863" style={{ maskType: `luminance` }} maskUnits="userSpaceOnUse" x="0" y="0" width="250" height="203">
     <path d="M250 0H0V202.402H250V0Z" fill="#FFFDF5"/>
     </mask>

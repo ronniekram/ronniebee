@@ -17,7 +17,7 @@ const Main = styled.main`
   background: url("/images/halftone/diagonal.png"), #40718C;
   background-blend-mode: multiply;
   background-size: cover;
-  background-position: fixed;
+  background-attachment: fixed;
   background-repeat: no-repeat;
   background-opacity: 50%;
 `;

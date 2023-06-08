@@ -9,7 +9,7 @@ import { anime } from "@/utility/fonts";
 
 //! ----------> STYLES <----------
 const Wrapper = styled.div`
-  ${tw`w-screen min-h-screen h-full`};
+  ${tw`w-screen h-screen`};
   ${tw`flex antialiased`};
   ${tw`md:(hidden)`};
 `;
