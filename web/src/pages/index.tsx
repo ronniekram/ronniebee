@@ -11,7 +11,7 @@ import { DevBurst, CityBurst } from "@/assets/burst";
 const Wrapper = styled.section`
   ${tw`mx-auto w-[fit-content] h-[fit-content] max-w-[72.75rem] xl:(w-[78%])`};
   ${tw`flex flex-col justify-center`};
-  ${tw`py-32 md:(py-20) xl:(py-12)`};
+  ${tw`py-24 md:(py-20) xl:(py-12)`};
 `;
 
 //! ----------> COMPONENTS <----------

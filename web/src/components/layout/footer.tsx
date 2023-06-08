@@ -5,7 +5,7 @@ import { karasuma } from "@/utility/fonts";
 
 //! ----------> STYLES <----------
 const Feet = styled.footer`
-  ${tw`relative z-10 w-screen xl:(h-[16.9375rem])`};
+  ${tw`relative z-[5] w-screen xl:(h-[16.9375rem])`};
   ${tw`px-[5.3%] md:(px-[5.2%]) 2xl:(px-0)`};
   ${tw`pt-6 pb-4 md:(pt-8 pb-3) xl:(pb-5)`};
   background: url("/images/halftone/teal.png"), #A63838;
