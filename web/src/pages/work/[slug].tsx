@@ -7,11 +7,10 @@ import { NextSeo } from "next-seo";
 import { groq } from "next-sanity";
 import "twin.macro";
 
-import { Project } from "../../../../studio/utility/types";
-
 import config from "next-seo.config";
 import { getClient } from "@/lib/sanity.client";
 
+import type { Project } from "@/utility/types";
 import Banner from "@/components/shared/page-banner";
 import { Wrapper } from "./index";
 
@@ -93,7 +92,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   const client = getClient();
   const slugs = await client.fetch(pathsQuery);
 
-  const paths = slugs?.map((project: { slug: { current: string;  }}) => ({
+  const paths = slugs?.map((project: { slug: { current: string; } }) => ({
     params: {
       slug: project.slug.current,
     },
