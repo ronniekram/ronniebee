@@ -8,11 +8,11 @@ import copy from "@/components/about/copy";
 import { Name, PersonalTop, PersonalBottom, Professional, Skills, SkillList, Lightning, More, End } from "@/components/about/sections";
 
 //! ----------> STYLES <----------
-const Wrapper = styled.section`
+const Wrapper = styled.div`
   ${tw`mx-auto w-full max-w-[86rem]`};
   ${tw`flex flex-col space-y-8`};
-  ${tw`py-12 md:(pt-20 pb-40 space-y-10) xl:(pt-28 pb-64 space-y-10) 2xl:(pt-32 pb-72)`};
-  ${tw`2xl:(pb-64)`};
+  ${tw`md:(items-end)`};
+  ${tw`py-12 md:(pt-20 pb-40 space-y-10) xl:(pt-28 pb-64 space-y-14) 2xl:(pt-28 pb-80)`};
 `;
 
 //! ----------> COMPONENTS <----------

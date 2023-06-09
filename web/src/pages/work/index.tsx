@@ -2,12 +2,14 @@ import type {
   NextPage,
   GetStaticProps,
 } from "next";
+import Image from "next/image";
 import type { ImageAsset } from "sanity";
 import { useEffect } from "react";
-import "twin.macro";
+import tw, { styled } from "twin.macro";
 import { groq } from "next-sanity";
 
 import { getClient } from "@/lib/sanity.client";
+import Banner from "@/components/shared/page-banner";
 
 //! ----------> TYPES <----------
 type ProjectProps = {
@@ -23,14 +25,33 @@ type Props = {
 };
 
 //! ----------> STYLES <----------
+export const Wrapper = styled.div`
+  ${tw`mx-auto w-full max-w-[86rem]`};
+  ${tw`flex flex-col space-y-8`};
+  ${tw`md:(items-end)`};
+  ${tw`py-12 md:(pt-20 pb-40 space-y-10) xl:(pt-28 pb-64 space-y-14) 2xl:(pt-28 pb-80)`};
+`;
+
 //! ----------> COMPONENTS <----------
 const WorkPage: NextPage<Props> = ({ projects }: Props) => {
+  const bannerIcon = (
+    <div tw="flex w-[3.75rem] h-[3.75rem] mb-4 md:(w-[4.5rem] h-[4.5rem]) xl:(w-[7rem] h-[7rem] mb-9)">
+      <Image
+        src="/images/bubbles/work.png"
+        width={322}
+        height={325}
+        loading="eager"
+        alt=""
+      />
+    </div>
+  );
 
-  useEffect(() => {
-    console.log(projects);
-  }, []);
+  return (
+    <Wrapper>
+      <Banner label="Work" icon={bannerIcon} />
 
-  return <div />
+    </Wrapper>
+  );
 };
 
 export default WorkPage;

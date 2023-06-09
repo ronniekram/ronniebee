@@ -27,7 +27,7 @@ const Wrapper = styled.section`
 const Items = styled.nav`
   ${tw`hidden font-display`};
   ${tw`md:(flex items-center)`};
-  ${tw`space-x-8 xl:(space-x-10)`};
+  ${tw`space-x-8 xl:(space-x-12) 2xl:(space-x-14)`};
 
   a {
     ${tw`transition duration-300 ease-in-out`};
@@ -47,7 +47,7 @@ const Nav = () => {
   const scroll = useScrollListener();
 
   const spring = useSpring({
-    to: { top: show ? 0 : bounds.height, zIndex: show ? 50 : 20 },
+    to: { top: show ? 0 : -bounds.height, zIndex: show ? 50 : 20 },
     config: { ...config.slow, clamp: true },
   });
 
@@ -74,7 +74,7 @@ const Nav = () => {
   return (
     <RemoveScroll enabled={open}>
       <>
-      <a.div style={spring} tw="bg-white w-screen">
+      <a.div style={spring} tw="bg-white w-screen fixed">
         <Wrapper ref={ref} className={anime.variable}>
           <Link
             href="/"

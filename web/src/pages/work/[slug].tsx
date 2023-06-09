@@ -1,8 +1,6 @@
 import type {
   NextPage,
   GetStaticProps,
-  GetStaticPropsContext,
-  InferGetStaticPropsType,
   GetStaticPaths,
 } from "next";
 import { NextSeo } from "next-seo";
@@ -13,6 +11,9 @@ import { Project } from "../../../../studio/utility/types";
 
 import config from "next-seo.config";
 import { getClient } from "@/lib/sanity.client";
+
+import Banner from "@/components/shared/page-banner";
+import { Wrapper } from "./index";
 
 //! ----------> TYPES <----------
 type Slug = {
@@ -31,21 +32,31 @@ type Props = {
 
 //! ----------> COMPONENTS <----------
 const ProjectPage: NextPage<Props> = ({ project, slugs }: Props) => {
-  console.log(project);
+  const currentIdx: number = slugs.findIndex((slugObj) => slugObj.slug.current === project?.slug?.current);
+
+  const prevProject = (): number => {
+    if (slugs[currentIdx - 1]) return currentIdx - 1;
+    return slugs.length - 1;
+  };
+
+  const nextProject = (): number => {
+    if (slugs[currentIdx + 1]) return currentIdx + 1;
+    return 0;
+  };
 
   return (
     <>
       <NextSeo
         {...config}
-        title={project.metaTitle}
-        description={project.metaDesc}
+        title={project?.metaTitle}
+        description={project?.metaDesc}
       />
 
-      <h1 tw="font-display font-bold text-white text-6xl">
-        {project.name}
-      </h1>
+      <Wrapper>
+        <Banner label={project?.name} />
+      </Wrapper>
     </>
-  )
+  );
 };
 
 export default ProjectPage;
