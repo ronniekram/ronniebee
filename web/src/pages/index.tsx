@@ -45,7 +45,7 @@ const Home: NextPage = () => {
         <DevBurst />
       </a.div>
 
-      <div tw="mx-auto flex flex-col w-[95%] -mt-12 relative z-10 md:(w-[91%] -mt-16) lg:(-mt-24) xl:(w-[90%]) 2xl:(w-[87%] -mt-44)">
+      <div tw="mx-auto flex flex-col w-[95%] -mt-12 relative z-10 md:(w-[91%] -mt-16) lg:(-mt-24) xl:(w-[90%]) 2xl:(w-[87%] -mt-48)">
         <p tw="font-display font-bold text-white text-base tracking-[0.75%] pl-[10%] pb-0.5 md:(text-[28px] pb-2) lg:(text-3xl)">
           Nice to meet you! I'm
         </p>

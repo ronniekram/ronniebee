@@ -17,17 +17,16 @@ import Mobile from "./mobile";
 const Wrapper = styled.section`
   ${tw`w-full max-w-[86rem] mx-auto bg-white text-grey-600`};
   ${tw`antialiased font-bold`};
-  ${tw`text-2xl xl:(text-[28px] leading-[36px])`};
+  ${tw`text-xl xl:(text-2xl)`};
   ${tw`px-[5.3%] md:(px-[5.2%]) 2xl:(px-0)`};
-  ${tw`py-2.5 md:(py-3) xl:(py-5)`};
+  ${tw`py-2.5 md:(py-3) xl:(py-3.5)`};
   ${tw`flex items-center justify-between`};
-  ${tw`drop-shadow-sm md:(drop-shadow-md)`};
 `;
 
 const Items = styled.nav`
   ${tw`hidden font-display`};
   ${tw`md:(flex items-center)`};
-  ${tw`space-x-8 xl:(space-x-12) 2xl:(space-x-14)`};
+  ${tw`space-x-6 xl:(space-x-8) 2xl:(space-x-10)`};
 
   a {
     ${tw`transition duration-300 ease-in-out`};
@@ -74,13 +73,13 @@ const Nav = () => {
   return (
     <RemoveScroll enabled={open}>
       <>
-      <a.div style={spring} tw="bg-white w-screen fixed">
+      <a.div style={spring} tw="bg-white w-screen fixed border-b-2 border-grey-600 drop-shadow-sm md:(drop-shadow-md)">
         <Wrapper ref={ref} className={anime.variable}>
           <Link
             href="/"
             prefetch={false}
             aria-label="Home"
-            tw="transition duration-300 ease-in-out flex w-[4.875rem] h-[3.125rem] md:(w-[5.8125rem] h-[3.75rem]) xl:(w-[6.3125rem] h-[4.0625rem]) 2xl:(w-[7.25rem] h-[4.6875rem]) hover:(scale-[105%])"
+            tw="transition duration-300 ease-in-out flex w-[4.875rem] h-[3.125rem] xl:(w-[5.8125rem] h-[3.75rem]) hover:(scale-[110%])"
           >
             <Image
               src="/images/rb.png"
