@@ -20,7 +20,7 @@ const Home: NextPage = () => {
   const [isCityHover, setCityHover] = useState<boolean>(false);
 
   const spring = useSpring({
-    transform: isHover ? `scale(1.25)` : `scale(1)`,
+    transform: isHover ? `scale(1.2)` : `scale(1)`,
     config: { tension: 300, friction: 10 },
   });
 

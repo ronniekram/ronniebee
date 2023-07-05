@@ -73,7 +73,7 @@ const Nav = () => {
   return (
     <RemoveScroll enabled={open}>
       <>
-      <a.div style={spring} tw="bg-white w-screen fixed border-b-2 border-grey-600 drop-shadow-sm md:(drop-shadow-md)">
+      <a.div style={spring} tw="bg-white w-screen fixed border-b-2 border-grey-600 shadow-sm md:(shadow-md)">
         <Wrapper ref={ref} className={anime.variable}>
           <Link
             href="/"

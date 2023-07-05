@@ -4,7 +4,7 @@ const Container = styled.div`
   ${tw`w-full`};
   ${tw`border-[3.5px] border-grey-600`};
   ${tw`px-6 py-8`};
-  ${tw`drop-shadow-sm`};
+  ${tw`shadow-sm`};
 `;
 
 export const Cream = styled(Container)`

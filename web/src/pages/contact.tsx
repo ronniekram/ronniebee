@@ -11,7 +11,7 @@ const Wrapper = styled.div`
   ${tw`mx-auto w-full max-w-[86rem]`};
   ${tw`flex flex-col space-y-8`};
   ${tw`md:(items-end)`};
-  ${tw`py-12 md:(pt-20 pb-40 space-y-10) xl:(pt-28 pb-64 space-y-14) 2xl:(pt-32 pb-80)`};
+  ${tw`py-12 md:(pt-16 pb-40 space-y-10) xl:(pb-64 space-y-14)`};
 `;
 
 const Content = styled.div`
@@ -25,7 +25,7 @@ const Content = styled.div`
 const ContactPage: NextPage = () => {
   const bannerIcon = (
     <div
-      tw="flex w-[5.625rem] h-[3.75rem] mb-4 md:(w-[6.75rem] h-[4.5rem]) xl:(w-[10.5rem] h-[7rem] mb-9)"
+      tw="flex w-[5.625rem] h-[3.75rem] mb-2 md:(w-[6.75rem] h-[4.5rem]) xl:(w-[10.5rem] h-[7rem] mb-2)"
     >
       <Image
         src="/images/bubbles/contact.png"

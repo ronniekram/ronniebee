@@ -26,7 +26,7 @@ const Right = styled.div`
   ${tw`flex flex-col justify-start space-y-24`};
   ${tw`px-8 pt-16 pb-24`};
   ${tw`border-l-[3px] border-grey-600`};
-  ${tw`drop-shadow-xl`};
+  ${tw`shadow-xl`};
 
   nav {
     ${tw`flex flex-col space-y-8`};

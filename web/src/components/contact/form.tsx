@@ -16,12 +16,12 @@ type FormValues = {
 const Form = styled.form`
   ${tw`w-full bg-yellow-600 text-grey-600`};
   ${tw`rounded-xl`};
-  ${tw`drop-shadow-lg border-[3px] border-grey-600 xl:(border-4)`};
-  ${tw`flex flex-col space-y-6 xl:(space-y-10)`};
-  ${tw`px-5 pt-14 pb-32 md:(px-8 pb-36) xl:(px-12 pt-20 pb-52) 2xl:(pt-24 pb-60)`};
+  ${tw`shadow-lg border-[3px] border-grey-600 xl:(border-4)`};
+  ${tw`flex flex-col space-y-6 xl:(space-y-8)`};
+  ${tw`px-5 pt-14 pb-32 md:(px-8 pb-36) xl:(px-12 pt-20 pb-32) 2xl:(px-14 pb-36)`};
 
   h2 {
-    ${tw`font-display font-bold text-2xl xl:(text-4xl) 2xl:(text-[40px])`};
+    ${tw`font-display font-bold text-2xl xl:(text-3xl)`};
     ${tw`text-center`};
   }
 `;

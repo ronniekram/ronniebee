@@ -10,7 +10,7 @@ const Container = styled.section`
   ${tw`px-5 pt-7 pb-10 md:(px-8 pt-8 pb-12) xl:(px-10 pt-14 pb-16) 2xl:(px-14)`};
 
   h2 {
-    ${tw`font-bold text-lg lg:(text-2xl) xl:(text-[28px]) 2xl:(text-3xl)`};
+    ${tw`font-display font-bold text-2xl xl:(text-3xl)`};
     ${tw`mb-4 xl:(mb-8)`};
   }
 `;
