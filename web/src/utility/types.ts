@@ -1,12 +1,18 @@
 import type { FileAsset, ImageAsset, PortableTextBlock } from "sanity";
 
+export type ImageObj = {
+  asset: ImageAsset;
+}
+
 export type Project = {
   _type: `project`;
   name: string;
   slug: {
     current: string;
   };
-  thumbnail: ImageAsset;
+  thumbnail: {
+    asset: ImageObj;
+  };
   headline: string;
   stack: string[];
   client?: string;
@@ -15,7 +21,7 @@ export type Project = {
   github?: string;
   live: string;
   details: PortableTextBlock;
-  media: (ImageAsset | FileAsset)[];
+  media: (ImageObj | FileAsset)[];
   metaTitle: string;
   metaDesc: string;
 };

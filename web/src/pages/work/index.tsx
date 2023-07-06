@@ -4,7 +4,6 @@ import type {
 } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import type { ImageAsset } from "sanity";
 import { useEffect } from "react";
 import tw, { styled, css } from "twin.macro";
 import { groq } from "next-sanity";
@@ -12,6 +11,7 @@ import { groq } from "next-sanity";
 import { getClient } from "@/lib/sanity.client";
 import SanityImage from "@/components/shared/sanity-image";
 import Banner from "@/components/shared/page-banner";
+import { ImageObj } from "@/utility/types";
 
 //! ----------> TYPES <----------
 type ProjectProps = {
@@ -19,7 +19,7 @@ type ProjectProps = {
   slug: {
     current: string;
   };
-  thumbnail: ImageAsset;
+  thumbnail: ImageObj;
 };
 
 type Props = {
@@ -172,7 +172,9 @@ export default WorkPage;
 const query = groq`*[_type == "project"] | order(orderRank) {
   name,
   slug,
-  thumbnail,
+  thumbnail{
+    asset->
+  },
 }`;
 
 export const getStaticProps: GetStaticProps = async () => {
