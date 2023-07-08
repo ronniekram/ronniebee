@@ -3,6 +3,7 @@ import { defineConfig } from "sanity";
 import { deskTool } from "sanity/desk";
 import { visionTool } from "@sanity/vision";
 import { orderableDocumentListDeskItem } from "@sanity/orderable-document-list";
+import { media } from "sanity-plugin-media";
 import { FiBriefcase } from "react-icons/fi";
 
 import { schemaTypes } from "./schemas";
@@ -21,7 +22,8 @@ export default defineConfig({
         orderableDocumentListDeskItem({ type: `project`, title: `Project`, icon: FiBriefcase, S, context }),
       ]),
     }),
-    visionTool()
+    visionTool(),
+    media(),
   ],
 
   schema: {

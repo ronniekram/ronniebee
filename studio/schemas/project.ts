@@ -36,6 +36,11 @@ export default {
       title: `Project Thumbnail`,
       type: `image`,
       validation: (Rule: any) => Rule.required(),
+      options: {
+        hotspot: true,
+        metadata: [`blurhash`, `lqip`, `palette`, `exif`, `location`],
+        crop: true,
+      },
     },
     {
       name: `headline`,

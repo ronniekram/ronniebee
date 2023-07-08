@@ -8,11 +8,11 @@ import copy from "@/components/about/copy";
 import { Name, PersonalTop, PersonalBottom, Professional, Skills, SkillList, Lightning, More, End } from "@/components/about/sections";
 
 //! ----------> STYLES <----------
-const Wrapper = styled.section`
+const Wrapper = styled.div`
   ${tw`mx-auto w-full max-w-[86rem]`};
   ${tw`flex flex-col space-y-8`};
-  ${tw`py-12 md:(pt-20 pb-40 space-y-10) xl:(pt-28 pb-64 space-y-10) 2xl:(pt-32 pb-72)`};
-  ${tw`2xl:(pb-64)`};
+  ${tw`md:(items-end)`};
+  ${tw`py-12 md:(pt-16 pb-40 space-y-10) xl:(pb-64 space-y-14)`};
 `;
 
 //! ----------> COMPONENTS <----------
@@ -72,9 +72,9 @@ const AboutPage: NextPage = () => {
   const { width } = useWindowSize();
 
   const bannerIcon = (
-    <div tw="flex w-[3.75rem] h-[3.75rem] mb-4 md:(w-[4.5rem] h-[4.5rem]) xl:(w-[7rem] h-[7rem] mb-9)">
+    <div tw="flex w-[6.1875rem] h-[4.6875rem] mb-2 md:(w-[7.4375rem] h-[5.625rem]) xl:(w-[9.25rem] h-[7rem] mb-2)">
       <Image
-        src="/images/bubbles/about.png"
+        src="/images/bubbles/abouT.png"
         width={348}
         height={325}
         loading="eager"
