@@ -5,6 +5,7 @@ declare global {
       NEXT_PUBLIC_SANITY_PROJECT_ID: string;
       NEXT_PUBLIC_SANITY_DATASET: string;
       BREVO_API_KEY: string;
+      SECRET_TOKEN: string;
     }
   }
 }

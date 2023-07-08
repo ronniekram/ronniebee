@@ -1,3 +1,4 @@
+/* eslint-disable unicorn/numeric-separators-style */
 import type {
   NextPage,
   GetStaticProps,
@@ -161,7 +162,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     slugs,
   };
 
-  return { props, revalidate: 60 };
+  return { props, revalidate: 86400 };
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {

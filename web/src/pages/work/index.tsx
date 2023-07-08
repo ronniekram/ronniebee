@@ -1,3 +1,4 @@
+/* eslint-disable unicorn/numeric-separators-style */
 import type {
   NextPage,
   GetStaticProps,
@@ -192,7 +193,7 @@ export const getStaticProps: GetStaticProps = async () => {
 
   const props = {
     projects,
-    revalidate: 60,
+    revalidate: 86400,
   };
 
   return { props };
