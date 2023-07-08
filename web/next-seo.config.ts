@@ -1,7 +1,7 @@
 import { DefaultSeoProps } from "next-seo";
 
 const config: DefaultSeoProps = {
-  titleTemplate: `@ ronniebee.dev`,
+  titleTemplate: `%s @ ronniebee.dev`,
   title: `FULLSTACK DEV // PGH, PA`,
   description: `Portfolio website for Ronnie Boniface, a fullstack developer in Pittsburgh, PA`,
   canonical: `https://ronniebee.dev`,

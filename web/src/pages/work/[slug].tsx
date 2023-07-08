@@ -86,8 +86,8 @@ const ProjectPage: NextPage<Props> = ({ project, slugs }: Props) => {
     <>
       <NextSeo
         {...config}
-        title={project?.metaTitle}
-        description={project?.metaDesc}
+        title={project.metaTitle}
+        description={project.metaDesc}
         canonical={`https://ronniebee.dev/work/${project.slug.current}`}
       />
 

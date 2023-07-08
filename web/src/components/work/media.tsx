@@ -76,7 +76,7 @@ const Trigger = ({ project, name, idx, media }: TriggerProps) => {
           type="button"
           aria-label="See more"
         >
-          <SanityImage image={project} alt={name} />
+          <SanityImage image={project} alt={name} lazy />
         </Thumbnail>
       </Modal>
   );

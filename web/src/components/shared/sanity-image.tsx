@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { createClient } from "next-sanity";
+import type { ImageUrlBuilder, UseNextSanityImageBuilderOptions } from "next-sanity-image";
 import { useNextSanityImage } from "next-sanity-image";
 import { ImageObj } from "@/utility/types";
 
@@ -9,8 +10,14 @@ const client = createClient({
 	useCdn: true
 });
 
-const SanityImage = ({ image, alt }: { image: ImageObj; alt: string  }) => {
-  const props = useNextSanityImage(client, image);
+const customBuilder = (
+  builder: ImageUrlBuilder
+) => {
+  return builder.quality(100).fit(`clip`).auto(`format`);
+};
+
+const SanityImage = ({ image, alt, lazy }: { image: ImageObj; alt: string; lazy?: boolean  }) => {
+  const props = useNextSanityImage(client, image, { imageBuilder: customBuilder });
 
   return (
     <Image
@@ -19,6 +26,9 @@ const SanityImage = ({ image, alt }: { image: ImageObj; alt: string  }) => {
       style={{ objectFit: `cover`, objectPosition: `center` }}
       placeholder="blur"
       blurDataURL={image.asset?.metadata?.lqip}
+      quality={100}
+      loader={props.loader}
+      loading={lazy ? `lazy` : `eager`}
     />
   );
 };

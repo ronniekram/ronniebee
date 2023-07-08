@@ -152,7 +152,7 @@ const WorkPage: NextPage<Props> = ({ projects }: Props) => {
                 style={{ objectFit: `cover`, objectPosition: `center` }}
                 css={[i === 1 && halftoneTop]}
               >
-                <SanityImage image={project.thumbnail} alt={project.name} />
+                <SanityImage image={project.thumbnail} alt={project.name} lazy />
               </Panel>
             ))}
           </Second>
@@ -165,7 +165,7 @@ const WorkPage: NextPage<Props> = ({ projects }: Props) => {
                 style={{ objectFit: `cover`, objectPosition: `center` }}
                 css={[i === 0 && halftoneBottom, i === 2 && halftoneCircle]}
               >
-                <SanityImage image={project.thumbnail} alt={project.name} />
+                <SanityImage image={project.thumbnail} alt={project.name} lazy />
               </Panel>
             ))}
           </Remaining>
