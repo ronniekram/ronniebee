@@ -10,9 +10,7 @@ export type Project = {
   slug: {
     current: string;
   };
-  thumbnail: {
-    asset: ImageObj;
-  };
+  thumbnail: ImageObj;
   headline: string;
   stack: string[];
   client?: string;
@@ -21,7 +19,7 @@ export type Project = {
   github?: string;
   live: string;
   details: PortableTextBlock;
-  media: (ImageObj | FileAsset)[];
+  media: ImageObj[];
   metaTitle: string;
   metaDesc: string;
 };

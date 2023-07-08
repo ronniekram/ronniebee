@@ -3,16 +3,21 @@ import type {
   GetStaticProps,
   GetStaticPaths,
 } from "next";
+import Link from "next/link";
 import { NextSeo } from "next-seo";
 import { groq } from "next-sanity";
-import "twin.macro";
+import tw, { styled } from "twin.macro";
+import { FiArrowLeftCircle, FiArrowRightCircle } from "react-icons/fi";
 
 import config from "next-seo.config";
 import { getClient } from "@/lib/sanity.client";
 
-import type { Project } from "@/utility/types";
-import Banner from "@/components/shared/page-banner";
+import type { ImageObj, Project } from "@/utility/types";
 import { Wrapper } from "./index";
+import SanityImage from "@/components/shared/sanity-image";
+import Banner from "@/components/shared/page-banner";
+import ProjectDetail from "@/components/work/detail";
+import Media from "@/components/work/media";
 
 //! ----------> TYPES <----------
 type Slug = {
@@ -24,10 +29,31 @@ type Slug = {
 };
 
 type Props = {
-  project: Project;
+  project: Omit<Project, `media`> & { media: ImageObj[] };
   slugs: Slug[];
 };
 
+//! ----------> STYLES <----------
+const Nav = styled(Link)`
+  ${tw`w-11 h-11 xl:(w-16 h-16)`};
+  ${tw`bg-yellow-500 text-grey-600`};
+  ${tw`rounded-full shadow-xl`};
+  ${tw`flex items-center justify-center`};
+  ${tw`text-[37px] md:(text-[54px])`};
+`;
+
+const Project = styled.div`
+  ${tw`w-full`};
+  ${tw`grid grid-cols-1 gap-y-5`};
+  ${tw`md:(gap-y-6)`};
+  ${tw`lg:(grid-cols-[auto, 55%] gap-x-[5%] gap-y-0)`};
+`;
+
+const NavWrapper = styled.div`
+  ${tw`w-full max-w-[86rem] mx-auto`};
+  ${tw`flex items-center justify-between`};
+  ${tw`pb-12 md:(pb-24) xl:(pb-40)`};
+`;
 
 //! ----------> COMPONENTS <----------
 const ProjectPage: NextPage<Props> = ({ project, slugs }: Props) => {
@@ -43,6 +69,17 @@ const ProjectPage: NextPage<Props> = ({ project, slugs }: Props) => {
     return 0;
   };
 
+  const text = {
+    details: project.details,
+    headline: project.headline,
+    stack: project.stack,
+    client: project.client,
+    creative: project.creative,
+    devs: project.devs,
+    github: project.github,
+    live: project.live,
+  };
+
   return (
     <>
       <NextSeo
@@ -53,7 +90,33 @@ const ProjectPage: NextPage<Props> = ({ project, slugs }: Props) => {
 
       <Wrapper>
         <Banner label={project?.name} />
+
+        <Project>
+          <div tw="w-full flex flex-col space-y-5 md:(space-y-6) lg:(order-2)">
+            <div tw="rounded-2xl border-[3px] border-grey-600 shadow-2xl overflow-hidden">
+              <SanityImage image={project.thumbnail} alt={project.name} />
+            </div>
+            <ProjectDetail {...text} />
+          </div>
+          <Media name={project.name} media={project.media} />
+        </Project>
+
       </Wrapper>
+      {/* NAVIGATION */}
+      <NavWrapper>
+        <Nav
+          href={`${slugs[prevProject()].slug.current}`}
+          aria-label="Previous project"
+        >
+          <FiArrowLeftCircle strokeWidth={1.5} />
+        </Nav>
+        <Nav
+          href={`${slugs[nextProject()].slug.current}`}
+          aria-label="Next project"
+        >
+          <FiArrowRightCircle strokeWidth={1.5} />
+        </Nav>
+      </NavWrapper>
     </>
   );
 };
@@ -61,7 +124,15 @@ const ProjectPage: NextPage<Props> = ({ project, slugs }: Props) => {
 export default ProjectPage;
 
 //! ----------> PROPS <----------
-const query = groq`*[_type == "project" && slug.current == $slug]`;
+const query = groq`*[_type == "project" && slug.current == $slug]{
+  ...,
+  thumbnail{
+    asset->
+  },
+  media[]{
+    asset->
+  }
+}`;
 
 const slugQuery = groq`*[_type == "project"] | order(orderRank) {
   slug {
@@ -81,7 +152,9 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   const slugs: Slug[] = await client.fetch(slugQuery);
 
   const props = {
-    project: project[0],
+    project: {
+      ...project[0]
+    },
     slugs,
   };
 

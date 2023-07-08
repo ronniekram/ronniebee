@@ -4,7 +4,6 @@ import type {
 } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect } from "react";
 import tw, { styled, css } from "twin.macro";
 import { groq } from "next-sanity";
 
@@ -67,7 +66,7 @@ export const Wrapper = styled.div`
   ${tw`mx-auto w-full max-w-[86rem]`};
   ${tw`flex flex-col space-y-8`};
   ${tw`md:(items-end)`};
-  ${tw`py-12 md:(pt-16 pb-40 space-y-10) xl:(pb-64 space-y-14)`};
+  ${tw`py-12 md:(pt-16 pb-20 space-y-10) xl:(pb-20 space-y-14)`};
 `;
 
 const Gallery = styled.div`
