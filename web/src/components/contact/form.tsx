@@ -1,12 +1,15 @@
+import { useState } from "react";
 import Image from "next/image";
 import tw, { styled } from "twin.macro";
 import { useForm } from "react-hook-form";
+import axios from "axios";
 
 import Button from "../shared/button";
 import { Input, Text } from "./input";
+import LoadingDots from "../shared/loading";
 
 //! ----------> TYPES <----------
-type FormValues = {
+export type FormValues = {
   name: string;
   email: string;
   message: string;
@@ -32,50 +35,69 @@ const Fields = styled.div`
 
 //! ----------> COMPONENTS <----------
 const ContactForm = () => {
+  const [submitting, setSubmitting] = useState<boolean>(false);
+  const [isSent, setIsSent] = useState<boolean>(false);
   const { register, handleSubmit, formState: { errors } } = useForm<FormValues>();
 
-  const onSubmit = (data: FormValues) => {
-    console.table(data);
+  const onSubmit = async (data: FormValues) => {
+    setSubmitting(true);
+    try {
+      await axios.post(`/api/send-email`, { ...data });
+      setSubmitting(false);
+      setIsSent(true);
+    } catch (error) {
+      setSubmitting(false);
+      console.error(error);
+    }
   };
 
   return (
     <div tw="w-full">
       <Form onSubmit={handleSubmit(onSubmit)}>
-        <h2>Drop me a line!</h2>
-        <Fields>
-          <Input
-            type="text"
-            label="Name*"
-            placeholder="Ronnie Bee"
-            register={{
-              ...register(`name`, {
-                required: `Required`,
-              })
-            }}
-          />
-          <Input
-            type="email"
-            label="Email*"
-            placeholder="me@ronniebee.dev"
-            register={{
-              ...register(`email`, {
-                required: `Required`,
-              })
-            }}
-          />
-          <Text
-            label="Message*"
-            placeholder="Wanna see a picture of my dog?"
-            register={{
-              ...register(`message`, {
-                required: `Required`,
-              })
-            }}
-          />
-        </Fields>
-        <div tw="w-full flex justify-end">
-          <Button label="Shoot!" type="submit" />
-        </div>
+        {!isSent ? (
+          <>
+            <h2>Drop me a line!</h2>
+            <Fields>
+              <Input
+                type="text"
+                label="Name*"
+                placeholder="Ronnie Bee"
+                register={{
+                  ...register(`name`, {
+                    required: `Required`,
+                  })
+                }}
+                error={errors?.name?.message}
+              />
+              <Input
+                type="email"
+                label="Email*"
+                placeholder="me@ronniebee.dev"
+                register={{
+                  ...register(`email`, {
+                    required: `Required`,
+                  })
+                }}
+                error={errors?.email?.message}
+              />
+              <Text
+                label="Message*"
+                placeholder="Wanna see a picture of my dog?"
+                register={{
+                  ...register(`message`, {
+                    required: `Required`,
+                  })
+                }}
+                error={errors?.message?.message}
+              />
+            </Fields>
+            <div tw="w-full flex justify-end">
+              <Button label={submitting ? <LoadingDots /> : `Shoot!`} type="submit" />
+            </div>
+          </>
+        ) : (
+          <h2>Thanks! I'll talk to you soon!</h2>
+        )}
       </Form>
       <div
         tw="w-[15.1875rem] h-[12.5rem] -mt-24 md:(w-[18.75rem] h-[15.5rem] -mt-36 -ml-20) xl:(w-[22.8125rem] h-[18.75rem] -mt-44) 2xl:(w-[28.125rem] h-[23.1875rem] -mt-56)"
