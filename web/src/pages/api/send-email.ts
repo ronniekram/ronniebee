@@ -1,28 +1,54 @@
-/* eslint-disable no-secrets/no-secrets */
-import { NextApiRequest, NextApiResponse } from "next";
-import postmark from "postmark";
+import { NextApiRequest, NextApiResponse, NextApiHandler } from "next";
+const Brevo = require('sib-api-v3-sdk');
 
-import { FormValues } from "@/components/contact/form";
+import type { FormValues } from "@/components/contact/form";
 
-const client = new postmark.ServerClient(process.env.POSTMARK_SERVER_TOKEN);
-
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+const handler: NextApiHandler = async (req: NextApiRequest, res: NextApiResponse) => {
   const body: FormValues = req?.body;
 
+  const { name, email, message } = body;
+
+  Brevo.ApiClient.instance.authentications['api-key'].apiKey = process.env.BREVO_API_KEY;
+
   try {
-    await client.sendEmail({
-      "From": `me@ronniebee.dev`,
-      "To": `cac0731fa0b48a89b6bb9d12bca81e59+81f0823fab418c781ec69e01ecc91a17@inbound.postmarkapp.com`,
-      "Subject": `Contact Form Email`,
-      "HtmlBody": `
-        <p>${body.email}</p>
-        <p>${body.message}</p>
-        <p>Love, ${body.name}</p>,
-      `,
-      "MessageStream": `outbound`,
-    });
-    return res.json({ message: `Email sent` });
+    const response = await new Brevo.TransactionalEmailsApi().sendTransacEmail(
+      {
+        subject: `Portfolio Contact Form Submission`,
+        sender: {
+          email: email,
+          name: name,
+        },
+        replyTo: {
+          email: email,
+          name: name,
+        },
+        to: [
+          {
+            email: `me+olive@ronniebee.dev`,
+            name: `Ronnie Bee`,
+          }
+        ],
+        htmlContent:`
+          <html>
+            <body>
+              <h1>Website Event Request</h1>
+              <p><strong>Name</strong>: ${name}</p>
+              <p><strong>Emaill</strong>: ${email}</p>
+              <p><strong>Message</strong>: ${message}</p>
+            </body>
+          </html>
+        `,
+        params: {
+          bodyMessage: `Sent to you from ronniebee.dev`,
+        },
+      }
+    )
+    .then((resp: any) => resp.json())
+    .catch((error: any) => error.json());
+    return res.json(response);
   } catch (error) {
-    return res.json({ message: `It's a problem`, error });
+    return res.json(error);
   }
 };
+
+export default handler;

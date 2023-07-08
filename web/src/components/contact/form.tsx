@@ -22,6 +22,7 @@ const Form = styled.form`
   ${tw`shadow-lg border-[3px] border-grey-600 xl:(border-4)`};
   ${tw`flex flex-col space-y-6 xl:(space-y-8)`};
   ${tw`px-5 pt-14 pb-32 md:(px-8 pb-36) xl:(px-12 pt-20 pb-32) 2xl:(px-14 pb-36)`};
+  ${tw`lg:(min-h-[38.875rem]) xl:(min-h-[44rem]) 2xl:(min-h-[50rem])`};
 
   h2 {
     ${tw`font-display font-bold text-2xl xl:(text-3xl)`};
@@ -31,6 +32,17 @@ const Form = styled.form`
 
 const Fields = styled.div`
   ${tw`flex flex-col space-y-6 md:(space-y-4) xl:(space-y-7)`};
+`;
+
+const Thanks = styled.div`
+  ${tw`font-display font-bold text-lg xl:(text-xl) 2xl:(text-2xl)`};
+  ${tw`pb-8 xl:(pb-20) 2xl:(pb-32)`};
+  ${tw`flex flex-col space-y-5`};
+  ${tw`text-center`};
+
+  h3, p {
+    text-wrap: balance;
+  }
 `;
 
 //! ----------> COMPONENTS <----------
@@ -96,7 +108,10 @@ const ContactForm = () => {
             </div>
           </>
         ) : (
-          <h2>Thanks! I'll talk to you soon!</h2>
+          <Thanks>
+            <h3>Thanks for reaching out!</h3>
+            <p tw="font-normal">I'll get back to you as soon as I can.</p>
+          </Thanks>
         )}
       </Form>
       <div

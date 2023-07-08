@@ -14,7 +14,7 @@ const Wrapper = styled.div`
   ${tw`mx-auto w-full max-w-[86rem]`};
   ${tw`flex flex-col space-y-8`};
   ${tw`md:(items-end)`};
-  ${tw`py-12 md:(pt-16 pb-40 space-y-10) xl:(pb-64 space-y-14)`};
+  ${tw`pt-12 pb-16 md:(pt-16 pb-20 space-y-10) lg:(pb-24) xl:(pb-36 space-y-14)`};
 `;
 
 //! ----------> COMPONENTS <----------

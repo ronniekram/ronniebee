@@ -53,13 +53,13 @@ const Modal = ({ children, render, open: passedOpen = false }: DialogProps) => {
               lockScroll
               style={{
                 width: `100vw`,
-                height: `100dvh`,
+                // minHeight: `100dvh`,
+                height: `100vh`,
                 display: "flex",
                 position: `absolute`,
                 justifyContent: `center`,
                 alignItems: `center`,
-                background: "rgba(33, 33, 33, 0.35)",
-                top: 0,
+                background: "rgba(33, 33, 33, 0.5)",
                 zIndex: 100,
               }}
             >
