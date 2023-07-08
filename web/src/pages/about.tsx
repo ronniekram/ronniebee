@@ -1,8 +1,10 @@
 import type { NextPage } from "next";
 import Image from "next/image";
+import { NextSeo } from "next-seo";
 import tw, { styled } from "twin.macro";
 import { useWindowSize } from "react-use";
 
+import config from "next-seo.config";
 import Banner from "@/components/shared/page-banner";
 import copy from "@/components/about/copy";
 import { Name, PersonalTop, PersonalBottom, Professional, Skills, SkillList, Lightning, More, End } from "@/components/about/sections";
@@ -85,6 +87,12 @@ const AboutPage: NextPage = () => {
 
   return (
     <>
+      <NextSeo
+        {...config}
+        title="About"
+        description=""
+        canonical="https://ronniebee.dev/about"
+      />
       <Wrapper>
         <Banner label="About" icon={bannerIcon} />
         <div tw="flex flex-col space-y-1.5 md:(space-y-2.5)">

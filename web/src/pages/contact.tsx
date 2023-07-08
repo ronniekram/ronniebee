@@ -1,6 +1,9 @@
 import type { NextPage } from "next";
 import Image from "next/image";
+import { NextSeo } from "next-seo";
 import tw, { styled } from "twin.macro";
+
+import config from "next-seo.config";
 
 import Banner from "@/components/shared/page-banner";
 import ContactForm from "@/components/contact/form";
@@ -38,15 +41,23 @@ const ContactPage: NextPage = () => {
   );
 
   return (
-    <Wrapper>
-      <Banner label="Contact" icon={bannerIcon} />
-      <Content>
-        <div>
-          <ContactInfo />
-        </div>
-        <ContactForm />
-      </Content>
-    </Wrapper>
+    <>
+      <NextSeo
+        {...config}
+        title="Drop me a line!"
+        description=""
+        canonical="https://ronniebee.dev/contact"
+      />
+      <Wrapper>
+        <Banner label="Contact" icon={bannerIcon} />
+        <Content>
+          <div>
+            <ContactInfo />
+          </div>
+          <ContactForm />
+        </Content>
+      </Wrapper>
+    </>
   );
 };
 

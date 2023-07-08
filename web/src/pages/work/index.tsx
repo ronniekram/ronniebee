@@ -4,9 +4,11 @@ import type {
 } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { NextSeo } from "next-seo";
 import tw, { styled, css } from "twin.macro";
 import { groq } from "next-sanity";
 
+import config from "next-seo.config";
 import { getClient } from "@/lib/sanity.client";
 import SanityImage from "@/components/shared/sanity-image";
 import Banner from "@/components/shared/page-banner";
@@ -120,48 +122,56 @@ const WorkPage: NextPage<Props> = ({ projects }: Props) => {
   );
 
   return (
-    <Wrapper>
-      <Banner label="Work" icon={bannerIcon} />
-      <Gallery>
-        <Featured>
-          {featured.map((project) => (
-            <Panel
-              key={project.slug.current}
-              href={`/work/${project.slug.current}`}
-              style={{ objectFit: `cover`, objectPosition: `center` }}
-            >
-              <SanityImage image={project.thumbnail} alt={project.name} />
-            </Panel>
-          ))}
-        </Featured>
+    <>
+      <NextSeo
+        {...config}
+        title="Projects"
+        description=""
+        canonical="https://ronniebee.dev/work"
+      />
+      <Wrapper>
+        <Banner label="Work" icon={bannerIcon} />
+        <Gallery>
+          <Featured>
+            {featured.map((project) => (
+              <Panel
+                key={project.slug.current}
+                href={`/work/${project.slug.current}`}
+                style={{ objectFit: `cover`, objectPosition: `center` }}
+              >
+                <SanityImage image={project.thumbnail} alt={project.name} />
+              </Panel>
+            ))}
+          </Featured>
 
-        <Second>
-          {second.map((project, i) => (
-            <Panel
-              key={project.slug.current}
-              href={`/work/${project.slug.current}`}
-              style={{ objectFit: `cover`, objectPosition: `center` }}
-              css={[i === 1 && halftoneTop]}
-            >
-              <SanityImage image={project.thumbnail} alt={project.name} />
-            </Panel>
-          ))}
-        </Second>
+          <Second>
+            {second.map((project, i) => (
+              <Panel
+                key={project.slug.current}
+                href={`/work/${project.slug.current}`}
+                style={{ objectFit: `cover`, objectPosition: `center` }}
+                css={[i === 1 && halftoneTop]}
+              >
+                <SanityImage image={project.thumbnail} alt={project.name} />
+              </Panel>
+            ))}
+          </Second>
 
-        <Remaining>
-          {remaining.map((project, i) => (
-            <Panel
-              key={project.slug.current}
-              href={`/work/${project.slug.current}`}
-              style={{ objectFit: `cover`, objectPosition: `center` }}
-              css={[i === 0 && halftoneBottom, i === 2 && halftoneCircle]}
-            >
-              <SanityImage image={project.thumbnail} alt={project.name} />
-            </Panel>
-          ))}
-        </Remaining>
-      </Gallery>
-    </Wrapper>
+          <Remaining>
+            {remaining.map((project, i) => (
+              <Panel
+                key={project.slug.current}
+                href={`/work/${project.slug.current}`}
+                style={{ objectFit: `cover`, objectPosition: `center` }}
+                css={[i === 0 && halftoneBottom, i === 2 && halftoneCircle]}
+              >
+                <SanityImage image={project.thumbnail} alt={project.name} />
+              </Panel>
+            ))}
+          </Remaining>
+        </Gallery>
+      </Wrapper>
+    </>
   );
 };
 

@@ -88,6 +88,7 @@ const ProjectPage: NextPage<Props> = ({ project, slugs }: Props) => {
         {...config}
         title={project?.metaTitle}
         description={project?.metaDesc}
+        canonical={`https://ronniebee.dev/work/${project.slug.current}`}
       />
 
       <Wrapper>
