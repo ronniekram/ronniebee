@@ -1,8 +1,10 @@
 import type { NextPage } from "next";
 import Image from "next/image";
+import { NextSeo } from "next-seo";
 import tw, { styled } from "twin.macro";
 import { useWindowSize } from "react-use";
 
+import config from "next-seo.config";
 import Banner from "@/components/shared/page-banner";
 import copy from "@/components/about/copy";
 import { Name, PersonalTop, PersonalBottom, Professional, Skills, SkillList, Lightning, More, End } from "@/components/about/sections";
@@ -12,7 +14,7 @@ const Wrapper = styled.div`
   ${tw`mx-auto w-full max-w-[86rem]`};
   ${tw`flex flex-col space-y-8`};
   ${tw`md:(items-end)`};
-  ${tw`py-12 md:(pt-16 pb-40 space-y-10) xl:(pb-64 space-y-14)`};
+  ${tw`pt-12 pb-16 md:(pt-16 pb-20 space-y-10) lg:(pb-24) xl:(pb-36 space-y-14)`};
 `;
 
 //! ----------> COMPONENTS <----------
@@ -72,11 +74,11 @@ const AboutPage: NextPage = () => {
   const { width } = useWindowSize();
 
   const bannerIcon = (
-    <div tw="flex w-[6.1875rem] h-[4.6875rem] mb-2 md:(w-[7.4375rem] h-[5.625rem]) xl:(w-[9.25rem] h-[7rem] mb-2)">
+    <div tw="flex w-[5.5625rem] h-[4.6875rem] mb-2 md:(w-[6.6875rem] h-[5.625rem]) xl:(w-[8.3125rem] h-[7rem] mb-2)">
       <Image
-        src="/images/bubbles/abouT.png"
-        width={348}
-        height={325}
+        src="/images/bubbles/about.webp"
+        width={133}
+        height={112}
         loading="eager"
         alt=""
       />
@@ -85,6 +87,12 @@ const AboutPage: NextPage = () => {
 
   return (
     <>
+      <NextSeo
+        {...config}
+        title="About"
+        description=""
+        canonical="https://ronniebee.dev/about"
+      />
       <Wrapper>
         <Banner label="About" icon={bannerIcon} />
         <div tw="flex flex-col space-y-1.5 md:(space-y-2.5)">

@@ -50,7 +50,7 @@ const Home: NextPage = () => {
           Nice to meet you! I'm
         </p>
         <Image
-          src="/images/name.png"
+          src="/images/name.webp"
           width={1587}
           height={514}
           alt="Ronnie Boniface"

@@ -28,7 +28,7 @@ export const Cream = styled(Container)`
 export const Red = styled(Container)`
   ${tw`font-sans text-white text-sm md:(text-lg) lg:(text-xl) xl:(font-medium)`};
   ${tw`md:(px-10 pt-10) xl:(px-6)`};
-  background: url("/images/halftone/teal.png"), #A63838;
+  background: url("/images/halftone/teal.webp"), #A63838;
   background-position: center;
   background-repeat: no-repeat;
   background-blend-mode: multiply;
@@ -37,7 +37,7 @@ export const Red = styled(Container)`
 export const Teal = styled(Container)`
   ${tw`h-full overflow-hidden`};
   ${tw`text-white font-display font-bold tracking-[0.75px]`};
-  background: url("/images/halftone/outer-circle.png"), #40718C;
+  background: url("/images/halftone/outer-circle.webp"), #40718C;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

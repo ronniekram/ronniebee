@@ -9,7 +9,8 @@ const client = createClient({
 	useCdn: true
 });
 
-const SanityImage = ({ image, alt }: { image: ImageObj; alt: string  }) => {
+const SanityImage = ({ image, alt, lazy }: { image: ImageObj; alt: string; lazy?: boolean  }) => {
+  const width = image.asset.metadata.dimensions.width;
   const props = useNextSanityImage(client, image);
 
   return (
@@ -18,7 +19,11 @@ const SanityImage = ({ image, alt }: { image: ImageObj; alt: string  }) => {
       alt={alt}
       style={{ objectFit: `cover`, objectPosition: `center` }}
       placeholder="blur"
-      blurDataURL={image.asset?.metadata?.lqip}
+      blurDataURL={image.asset.metadata?.lqip}
+      quality={100}
+      loader={props.loader}
+      width={width}
+      loading={lazy ? `lazy` : `eager`}
     />
   );
 };

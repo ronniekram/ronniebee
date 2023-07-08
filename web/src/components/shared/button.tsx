@@ -2,7 +2,7 @@ import tw, { styled } from "twin.macro";
 
 //! ----------> TYPES <----------
 type Props = JSX.IntrinsicElements[`button`] & {
-  label: string;
+  label: string | JSX.Element;
 };
 
 //! ----------> STYLES <----------

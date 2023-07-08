@@ -35,7 +35,7 @@ type TriggerProps = {
 
 //! ----------> STYLES <----------
 const CarouselWrap = styled.div`
-  ${tw`w-[89%] h-auto md:(w-[89.5%])`};
+  ${tw`mx-auto w-[89%] h-auto md:(w-[89.5%])`};
   ${tw`rounded-2xl shadow-2xl overflow-hidden`};
   ${tw`relative`};
   ${tw`border-4 border-grey-600`};
@@ -76,7 +76,7 @@ const Trigger = ({ project, name, idx, media }: TriggerProps) => {
           type="button"
           aria-label="See more"
         >
-          <SanityImage image={project} alt={name} />
+          <SanityImage image={project} alt={name} lazy />
         </Thumbnail>
       </Modal>
   );

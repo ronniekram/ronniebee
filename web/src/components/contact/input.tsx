@@ -4,6 +4,7 @@ import tw, { styled } from "twin.macro";
 type Props = {
   label: string;
   register: any;
+  error?: string;
 };
 
 type FieldProps = JSX.IntrinsicElements[`input`] & Props;
@@ -35,16 +36,22 @@ const Label = styled.label`
 `;
 
 //! ----------> COMPONENTS <----------
-export const Input = ({ label, register, ...rest }: FieldProps) => (
+export const Input = ({ label, register, error, ...rest }: FieldProps) => (
   <Label>
-    <p tw="px-3 mb-0.5 md:(px-4) 2xl:(mb-1)">{label}</p>
+    <div tw="flex items-center space-x-4 2xl:(mb-1)">
+      <p tw="pl-3 mb-0.5 md:(pl-4)">{label}</p>
+      <p tw="font-sans font-bold text-red-500 text-xs xl:(text-sm)">{error}</p>
+    </div>
     <Field {...rest} {...register} />
   </Label>
 );
 
-export const Text = ({ label, register, ...rest }: AreaProps) => (
+export const Text = ({ label, register, error, ...rest }: AreaProps) => (
   <Label>
-    <p tw="px-3 mb-0.5 md:(px-4) 2xl:(mb-1)">{label}</p>
+    <div tw="flex items-center space-x-4 2xl:(mb-1)">
+      <p tw="pl-3 mb-0.5 md:(pl-4)">{label}</p>
+      <p tw="font-sans font-bold text-red-500 text-xs xl:(text-sm)">{error}</p>
+    </div>
     <TextArea {...rest} {...register} />
   </Label>
 );

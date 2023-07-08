@@ -74,7 +74,7 @@ const Mobile = ({ setHeight }: { setHeight: (height: number) => void }) => {
 
         <Link href="/" prefetch={false} aria-label="Home" tw="flex self-end w-[9.5rem]">
           <Image
-            src="/images/rb.png"
+            src="/images/rb.webp"
             width={449}
             height={291}
             quality={100}

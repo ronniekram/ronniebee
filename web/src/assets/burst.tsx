@@ -1,7 +1,7 @@
 /* eslint-disable no-secrets/no-secrets */
 export const DevBurst = () => (
   <svg width="100%" height="100%" viewBox="0 0 525 426" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <g clip-path="url(#clip0_212_54472)">
+  <g clipPath="url(#clip0_212_54472)">
   <mask id="mask0_212_54472" style={{ maskType: `luminance` }} maskUnits="userSpaceOnUse" x="0" y="0" width="525" height="426">
   <path d="M524.482 0.706299H0.017334V425.706H524.482V0.706299Z" fill="white"/>
   </mask>
@@ -415,7 +415,7 @@ export const DevBurst = () => (
   </g>
   <defs>
     <filter id="filter0_d_212_54472" x="314.912" y="398.891" width="16.1731" height="16.165" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+    <feFlood floodOpacity="0" result="BackgroundImageFix"/>
     <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
     <feOffset dy="4"/>
     <feGaussianBlur stdDeviation="4"/>
@@ -425,7 +425,7 @@ export const DevBurst = () => (
     <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_212_54472" result="shape"/>
     </filter>
     <filter id="filter1_d_212_54472" x="400.185" y="82.7583" width="93.9929" height="56.0356" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+    <feFlood floodOpacity="0" result="BackgroundImageFix"/>
     <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
     <feOffset dy="4"/>
     <feGaussianBlur stdDeviation="4"/>
@@ -435,7 +435,7 @@ export const DevBurst = () => (
     <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_212_54472" result="shape"/>
     </filter>
     <filter id="filter2_d_212_54472" x="220.8" y="343.239" width="33.678" height="94.0781" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+    <feFlood floodOpacity="0" result="BackgroundImageFix"/>
     <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
     <feOffset dy="4"/>
     <feGaussianBlur stdDeviation="4"/>
@@ -445,7 +445,7 @@ export const DevBurst = () => (
     <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_212_54472" result="shape"/>
     </filter>
     <filter id="filter3_d_212_54472" x="33.6143" y="71.7939" width="88.7937" height="65.8369" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+    <feFlood floodOpacity="0" result="BackgroundImageFix"/>
     <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
     <feOffset dy="4"/>
     <feGaussianBlur stdDeviation="4"/>
@@ -455,7 +455,7 @@ export const DevBurst = () => (
     <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_212_54472" result="shape"/>
     </filter>
     <filter id="filter4_d_212_54472" x="-0.356934" y="-0.968262" width="532.84" height="395.425" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+    <feFlood floodOpacity="0" result="BackgroundImageFix"/>
     <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
     <feOffset dy="4"/>
     <feGaussianBlur stdDeviation="4"/>
@@ -465,7 +465,7 @@ export const DevBurst = () => (
     <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_212_54472" result="shape"/>
     </filter>
     <filter id="filter5_d_212_54472" x="63.9451" y="38.7356" width="403.196" height="310.203" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+    <feFlood floodOpacity="0" result="BackgroundImageFix"/>
     <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
     <feOffset dy="4"/>
     <feGaussianBlur stdDeviation="4"/>
@@ -475,7 +475,7 @@ export const DevBurst = () => (
     <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_212_54472" result="shape"/>
     </filter>
     <filter id="filter6_d_212_54472" x="292.207" y="-3.2937" width="76.835" height="123.316" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+    <feFlood floodOpacity="0" result="BackgroundImageFix"/>
     <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
     <feOffset dy="4"/>
     <feGaussianBlur stdDeviation="4"/>
@@ -485,7 +485,7 @@ export const DevBurst = () => (
     <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_212_54472" result="shape"/>
     </filter>
     <filter id="filter7_d_212_54472" x="333.111" y="268.65" width="109.246" height="117.833" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+    <feFlood floodOpacity="0" result="BackgroundImageFix"/>
     <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
     <feOffset dy="4"/>
     <feGaussianBlur stdDeviation="4"/>
@@ -495,7 +495,7 @@ export const DevBurst = () => (
     <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_212_54472" result="shape"/>
     </filter>
     <filter id="filter8_d_212_54472" x="-5.03613" y="210.341" width="150.843" height="41.748" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+    <feFlood floodOpacity="0" result="BackgroundImageFix"/>
     <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
     <feOffset dy="4"/>
     <feGaussianBlur stdDeviation="4"/>
@@ -513,7 +513,7 @@ export const DevBurst = () => (
 
 export const CityBurst = () => (
   <svg width="100%" height="100%" viewBox="0 0 250 203" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <g clip-path="url(#clip0_212_54863)">
+    <g clipPath="url(#clip0_212_54863)">
     <mask id="mask0_212_54863" style={{ maskType: `luminance` }} maskUnits="userSpaceOnUse" x="0" y="0" width="250" height="203">
     <path d="M250 0H0V202.402H250V0Z" fill="white"/>
     </mask>
@@ -920,7 +920,7 @@ export const CityBurst = () => (
     </g>
     <defs>
       <filter id="filter0_d_212_54863" x="186.564" y="37.019" width="53.1777" height="35.084" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feFlood floodOpacity="0" result="BackgroundImageFix"/>
       <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
       <feOffset dy="4"/>
       <feGaussianBlur stdDeviation="4"/>
@@ -930,7 +930,7 @@ export const CityBurst = () => (
       <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_212_54863" result="shape"/>
       </filter>
       <filter id="filter1_d_212_54863" x="101.055" y="161.184" width="24.4268" height="53.2183" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feFlood floodOpacity="0" result="BackgroundImageFix"/>
       <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
       <feOffset dy="4"/>
       <feGaussianBlur stdDeviation="4"/>
@@ -940,7 +940,7 @@ export const CityBurst = () => (
       <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_212_54863" result="shape"/>
       </filter>
       <filter id="filter2_d_212_54863" x="11.8281" y="31.7925" width="50.699" height="39.7559" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feFlood floodOpacity="0" result="BackgroundImageFix"/>
       <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
       <feOffset dy="4"/>
       <feGaussianBlur stdDeviation="4"/>
@@ -950,7 +950,7 @@ export const CityBurst = () => (
       <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_212_54863" result="shape"/>
       </filter>
       <filter id="filter3_d_212_54863" x="-4.36499" y="-2.8916" width="262.365" height="196.863" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feFlood floodOpacity="0" result="BackgroundImageFix"/>
       <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
       <feOffset dy="4"/>
       <feGaussianBlur stdDeviation="4"/>
@@ -960,7 +960,7 @@ export const CityBurst = () => (
       <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_212_54863" result="shape"/>
       </filter>
       <filter id="filter4_d_212_54863" x="26.2861" y="16.0342" width="200.567" height="156.24" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feFlood floodOpacity="0" result="BackgroundImageFix"/>
       <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
       <feOffset dy="4"/>
       <feGaussianBlur stdDeviation="4"/>
@@ -970,7 +970,7 @@ export const CityBurst = () => (
       <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_212_54863" result="shape"/>
       </filter>
       <filter id="filter5_d_212_54863" x="135.093" y="-4" width="44.9985" height="67.1548" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feFlood floodOpacity="0" result="BackgroundImageFix"/>
       <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
       <feOffset dy="4"/>
       <feGaussianBlur stdDeviation="4"/>
@@ -980,7 +980,7 @@ export const CityBurst = () => (
       <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_212_54863" result="shape"/>
       </filter>
       <filter id="filter6_d_212_54863" x="154.591" y="125.629" width="60.4482" height="64.5415" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feFlood floodOpacity="0" result="BackgroundImageFix"/>
       <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
       <feOffset dy="4"/>
       <feGaussianBlur stdDeviation="4"/>
@@ -990,7 +990,7 @@ export const CityBurst = () => (
       <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_212_54863" result="shape"/>
       </filter>
       <filter id="filter7_d_212_54863" x="-6.59546" y="97.8345" width="80.2764" height="28.2739" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feFlood floodOpacity="0" result="BackgroundImageFix"/>
       <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
       <feOffset dy="4"/>
       <feGaussianBlur stdDeviation="4"/>

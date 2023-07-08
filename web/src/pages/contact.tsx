@@ -1,6 +1,9 @@
 import type { NextPage } from "next";
 import Image from "next/image";
+import { NextSeo } from "next-seo";
 import tw, { styled } from "twin.macro";
+
+import config from "next-seo.config";
 
 import Banner from "@/components/shared/page-banner";
 import ContactForm from "@/components/contact/form";
@@ -28,7 +31,7 @@ const ContactPage: NextPage = () => {
       tw="flex w-[5.625rem] h-[3.75rem] mb-2 md:(w-[6.75rem] h-[4.5rem]) xl:(w-[10.5rem] h-[7rem] mb-2)"
     >
       <Image
-        src="/images/bubbles/contact.png"
+        src="/images/bubbles/contact.webp"
         width={487}
         height={325}
         alt="Comic style speech bubble"
@@ -38,15 +41,23 @@ const ContactPage: NextPage = () => {
   );
 
   return (
-    <Wrapper>
-      <Banner label="Contact" icon={bannerIcon} />
-      <Content>
-        <div>
-          <ContactInfo />
-        </div>
-        <ContactForm />
-      </Content>
-    </Wrapper>
+    <>
+      <NextSeo
+        {...config}
+        title="Drop me a line!"
+        description=""
+        canonical="https://ronniebee.dev/contact"
+      />
+      <Wrapper>
+        <Banner label="Contact" icon={bannerIcon} />
+        <Content>
+          <div>
+            <ContactInfo />
+          </div>
+          <ContactForm />
+        </Content>
+      </Wrapper>
+    </>
   );
 };
 

@@ -12,7 +12,4 @@ export const sanityClient = createClient({ dataset, projectId, apiVersion, useCd
 
 export const builder = imageUrlBuilder(sanityClient);
 
-export const urlFor = (source: SanityImageSource) =>
-  builder.image(source).auto(`format`).quality(100).fit(`fillmax`).url();
-
 export const getClient = () => sanityClient;
