@@ -74,11 +74,11 @@ const AboutPage: NextPage = () => {
   const { width } = useWindowSize();
 
   const bannerIcon = (
-    <div tw="flex w-[6.1875rem] h-[4.6875rem] mb-2 md:(w-[7.4375rem] h-[5.625rem]) xl:(w-[9.25rem] h-[7rem] mb-2)">
+    <div tw="flex w-[5.5625rem] h-[4.6875rem] mb-2 md:(w-[6.6875rem] h-[5.625rem]) xl:(w-[8.3125rem] h-[7rem] mb-2)">
       <Image
         src="/images/bubbles/abouT.png"
-        width={348}
-        height={325}
+        width={133}
+        height={112}
         loading="eager"
         alt=""
       />
