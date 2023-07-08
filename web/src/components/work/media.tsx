@@ -50,7 +50,7 @@ const More = styled.button`
 `;
 
 const Thumbnail = styled.button`
-  ${tw`w-full h-[13.8125rem] lg:(h-[fit-content])`};
+  ${tw`w-full h-[fit-content]`};
   ${tw`flex overflow-hidden`};
   ${tw`object-cover object-center`};
   ${tw`rounded-2xl border-[3px] border-grey-600`};
@@ -173,7 +173,19 @@ const Media = ({ name, media }: Props) => {
         <a.div style={spring} tw="overflow-hidden">
           <div
             ref={ref}
-            tw="grid grid-cols-1 gap-y-2.5 md:(grid-cols-2 gap-3) lg:(grid-cols-1)"
+            tw="grid grid-cols-1 gap-y-2.5 md:(gap-3) lg:(grid-cols-1!)"
+            css={[`
+              @media (min-width: 768px) {
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(${Math.ceil(media.length / 2)}, 1fr);
+                grid-auto-flow: column;
+              }
+              @media (min-width: 1024px) {
+                grid-template-columns: repeat(1, 1fr);
+                grid-template-rows: unset;
+                grid-auto-flow: unset;
+              }
+            `]}
           >
             {media.map((x, i) => (
               <Trigger

@@ -12,7 +12,7 @@ const Wrapper = styled.div`
   ${tw`flex items-center justify-between`};
   ${tw`px-5 py-2.5 xl:(px-10 py-2.5)`};
   ${tw`font-display font-bold`};
-  ${tw`text-grey-600 text-xl md:(text-2xl) lg:(text-[28px] leading-[36px]) xl:(text-3xl)`};
+  ${tw`text-grey-600 text-lg md:(text-2xl) lg:(text-[28px] leading-[36px]) xl:(text-3xl)`};
   ${tw`shadow-xl`};
 `;
 

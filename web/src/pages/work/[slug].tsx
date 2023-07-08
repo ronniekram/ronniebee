@@ -162,7 +162,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     slugs,
   };
 
-  return { props, revalidate: 86400 };
+  return { props, revalidate: 60 };
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
