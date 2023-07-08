@@ -54,10 +54,12 @@ const Modal = ({ children, render, open: passedOpen = false }: DialogProps) => {
               style={{
                 width: `100vw`,
                 height: `100dvh`,
-                display: "grid",
-                position: `relative`,
-                placeItems: "center",
+                display: "flex",
+                position: `absolute`,
+                justifyContent: `center`,
+                alignItems: `center`,
                 background: "rgba(33, 33, 33, 0.35)",
+                top: 0,
                 zIndex: 100,
               }}
             >
@@ -68,7 +70,7 @@ const Modal = ({ children, render, open: passedOpen = false }: DialogProps) => {
                   aria-labelledby={labelId}
                   aria-describedby={descriptionId}
                   {...getFloatingProps()}
-                  tw="absolute z-[100]"
+                  tw="relative z-[100] mx-auto max-w-[86rem]"
                 >
                   {render({
                     close: () => setOpen(false),

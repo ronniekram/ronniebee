@@ -22,18 +22,18 @@ type CarouselProps = {
   media: ImageObj[];
   currentIdx: number;
   close: () => void;
+  id: string;
+  descriptionId: string;
+};
+
+type TriggerProps = {
+  name: string;
+  project: ImageObj;
+  idx: number;
+  media: ImageObj[];
 };
 
 //! ----------> STYLES <----------
-const VideoWrap = styled.div`
-  ${tw`w-full h-full relative overflow-hidden`};
-  ${tw`shadow-2xl`};
-
-  video {
-    ${tw`object-cover object-center`};
-  }
-`;
-
 const CarouselWrap = styled.div`
   ${tw`w-[89%] h-auto md:(w-[89.5%])`};
   ${tw`rounded-2xl shadow-2xl overflow-hidden`};
@@ -58,18 +58,27 @@ const Thumbnail = styled.button`
 `;
 
 //! ----------> COMPONENTS <----------
-const Video = ({ src }: { src: string; }) => {
+const Trigger = ({ project, name, idx, media }: TriggerProps) => {
   return (
-    <VideoWrap>
-      <video
-        preload="auto"
-        controls
-        loop
+    <Modal
+        render={({ close, labelId, descriptionId }) => (
+          <Carousel
+            media={media}
+            close={close}
+            name={name}
+            currentIdx={idx}
+            id={labelId}
+            descriptionId={descriptionId}
+          />
+        )}
       >
-        <source src={src} type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-    </VideoWrap>
+        <Thumbnail
+          type="button"
+          aria-label="See more"
+        >
+          <SanityImage image={project} alt={name} />
+        </Thumbnail>
+      </Modal>
   );
 };
 
@@ -81,7 +90,7 @@ const Image = ({ img, alt }: { img: ImageObj; alt: string }) => {
   );
 };
 
-const Carousel = ({ name, media, currentIdx, close }: CarouselProps) => {
+const Carousel = ({ name, media, currentIdx, close, id, descriptionId }: CarouselProps) => {
   const {
     carouselFragment,
     slideToPrevItem,
@@ -96,12 +105,16 @@ const Carousel = ({ name, media, currentIdx, close }: CarouselProps) => {
   });
 
   return (
-    <CarouselWrap>
+    <CarouselWrap
+      id={id}
+    >
       <button
         type="button"
         onClick={close}
         aria-label="Close"
         tw="absolute z-20 top-0 right-0 mt-4 mr-4"
+        id={descriptionId}
+
       >
         <X />
       </button>
@@ -109,19 +122,19 @@ const Carousel = ({ name, media, currentIdx, close }: CarouselProps) => {
         type="button"
         onClick={slideToPrevItem}
         aria-label="Previous"
-        tw="absolute h-full flex items-center left-0 z-10"
+        tw="absolute h-full flex items-center left-0 z-10 ml-4"
       >
         <Back />
       </button>
-      {carouselFragment}
       <button
         type="button"
         onClick={slideToNextItem}
         aria-label="Next"
-        tw="absolute h-full flex items-center right-0 z-10"
+        tw="absolute h-full flex items-center right-0 z-10 mr-4"
       >
         <Next />
       </button>
+      {carouselFragment}
     </CarouselWrap>
   );
 };
@@ -129,9 +142,7 @@ const Carousel = ({ name, media, currentIdx, close }: CarouselProps) => {
 const Media = ({ name, media }: Props) => {
   const { width } = useWindowSize();
 
-  const [currentIdx, setCurrentIdx] = useState<number>(0);
   const [open, setOpen] = useState<boolean>(false);
-  const [openModal, setOpenModal] = useState<boolean>(false);
 
   const [ref, bounds] = useMeasure();
 
@@ -165,34 +176,17 @@ const Media = ({ name, media }: Props) => {
             tw="grid grid-cols-1 gap-y-2.5 md:(grid-cols-2 gap-3) lg:(grid-cols-1)"
           >
             {media.map((x, i) => (
-              <Thumbnail
+              <Trigger
+                project={x}
+                idx={i}
+                media={media}
+                name={name}
                 key={`${name}-${i}`}
-                type="button"
-                aria-label="See more"
-                onClick={() => {
-                  setCurrentIdx(i);
-                  setOpenModal(true);
-                }}
-              >
-                <SanityImage image={x} alt={name} />
-              </Thumbnail>
+              />
             ))}
           </div>
         </a.div>
       </section>
-
-      <Modal
-        render={({ close, labelId, descriptionId }) => (
-          <Carousel
-            media={media}
-            close={close}
-            name={name}
-            currentIdx={currentIdx}
-          />
-        )}
-      >
-        <div tw="hidden" />
-      </Modal>
     </>
   );
 };

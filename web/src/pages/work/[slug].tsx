@@ -36,10 +36,12 @@ type Props = {
 //! ----------> STYLES <----------
 const Nav = styled(Link)`
   ${tw`w-11 h-11 xl:(w-16 h-16)`};
-  ${tw`bg-yellow-500 text-grey-600`};
+  ${tw`bg-yellow-600 text-grey-600`};
   ${tw`rounded-full shadow-xl`};
   ${tw`flex items-center justify-center`};
   ${tw`text-[37px] md:(text-[54px])`};
+  ${tw`transition duration-300 ease-in-out`};
+  ${tw`hover:(bg-yellow-500)`};
 `;
 
 const Project = styled.div`

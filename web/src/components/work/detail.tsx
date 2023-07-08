@@ -19,11 +19,10 @@ const Container = styled.section`
 
 const H2 = tw.h2`font-bold text-xl md:(text-2xl) lg:(text-3xl) xl:(text-[2.5rem] leading-[3.25rem])`;
 
-const H3 = tw.h3`font-bold text-base md:(text-lg) lg:(text-xl) xl:(text-2xl)`;
+const H3 = tw.h3`font-bold text-sm md:(text-base) lg:(text-lg) xl:(text-xl)`;
 
 const Credit = styled.p`
-  ${tw`text-sm md:(text-base) lg:(text-lg) xl:(text-xl)`};
-  ${tw`py-1.5`};
+  ${tw`text-sm md:(text-base) lg:(text-lg)`};
   span {
     ${tw`text-red-500 font-bold`};
   }
@@ -42,11 +41,11 @@ const ProjectDetail = ({
 }: Props) => {
   return (
     <Container>
-      <div>
+      <div tw="flex flex-col space-y-2">
         <H2>{headline}</H2>
         <H3>{stack.join(`, `)}</H3>
 
-        <div tw="flex flex-col space-y-3">
+        <div tw="flex flex-col space-y-2">
           {client && (
             <Credit><span>Client:</span> {client}</Credit>
           )}
