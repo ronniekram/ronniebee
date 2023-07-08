@@ -76,7 +76,7 @@ const AboutPage: NextPage = () => {
   const bannerIcon = (
     <div tw="flex w-[5.5625rem] h-[4.6875rem] mb-2 md:(w-[6.6875rem] h-[5.625rem]) xl:(w-[8.3125rem] h-[7rem] mb-2)">
       <Image
-        src="/images/bubbles/abouT.png"
+        src="/images/bubbles/about.webp"
         width={133}
         height={112}
         loading="eager"

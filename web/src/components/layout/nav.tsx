@@ -82,7 +82,7 @@ const Nav = () => {
             tw="transition duration-300 ease-in-out flex w-[4.875rem] h-[3.125rem] xl:(w-[5.8125rem] h-[3.75rem]) hover:(scale-[110%])"
           >
             <Image
-              src="/images/rb.png"
+              src="/images/rb.webp"
               width={449}
               height={291}
               quality={100}

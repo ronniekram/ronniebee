@@ -38,7 +38,7 @@ export const PersonalTop = ({ title, body }: WithBody) => (
       tw="absolute z-0 flex -top-4 left-[-30%] mix-blend-color-burn md:(top-4 left-[-40%]) lg:(left-[-30%]) xl:(top-0 left-[-15%])"
     >
       <Image
-        src="/images/halftone/circle.png"
+        src="/images/halftone/circle.webp"
         width={490}
         height={448}
         alt=""
@@ -77,7 +77,7 @@ export const PersonalBottom = ({ body }: { body: string[] }) => (
 
     <div tw="w-full flex justify-end">
       <Image
-        src="/images/bubbles/star.png"
+        src="/images/bubbles/star.webp"
         width={75}
         height={72}
         alt=""
@@ -106,7 +106,7 @@ export const Skills = () => (
       tw="w-[15.625rem] h-[13.125rem] md:(w-[20.5625rem] h-[17.1875rem] -mt-4) lg:(w-[24.3125rem] h-[20.3125rem])"
     >
       <Image
-        src="/images/bubbles/skills.png"
+        src="/images/bubbles/skills.webp"
         width={389}
         height={325}
         alt="Comic style speech bubble with the word 'Skills'"
@@ -123,7 +123,7 @@ export const SkillList = ({ title, list, soft }: WithList) => (
         tw="absolute z-0 flex top-4 right-[-60%] mix-blend-color-burn md:(-top-4) lg:(right-[-35%]) xl:(w-[200%] right-[-55%])"
       >
         <Image
-          src="/images/halftone/circle.png"
+          src="/images/halftone/circle.webp"
           width={490}
           height={448}
           alt=""
@@ -158,7 +158,7 @@ export const Lightning = () => (
       tw="w-[97%] md:(w-[78.2%]) lg:(w-[65%]) xl:(w-[97%])"
     >
       <Image
-        src="/images/bubbles/lightning.png"
+        src="/images/bubbles/lightning.webp"
         width={236}
         height={170}
         alt="Yellow comic style lightning bolt"

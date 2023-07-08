@@ -32,7 +32,7 @@ const halftoneTop = css`
   &::after {
     content: '';
     ${tw`w-full h-full absolute`};
-    background-image: url("/images/halftone/half-down.png");
+    background-image: url("/images/halftone/half-down.webp");
     background-repeat: no-repeat;
     background-position: top;
     background-size: cover;
@@ -44,7 +44,7 @@ const halftoneBottom = css`
   &::after {
     content: '';
     ${tw`w-full h-full absolute`};
-    background-image: url("/images/halftone/yellow.png");
+    background-image: url("/images/halftone/yellow.webp");
     background-repeat: no-repeat;
     background-position: top;
     background-size: cover;
@@ -56,7 +56,7 @@ const halftoneCircle = css`
   &::after {
     content: '';
     ${tw`w-full h-full absolute`};
-    background-image: url("/images/halftone/outer-circle.png");
+    background-image: url("/images/halftone/outer-circle.webp");
     background-repeat: no-repeat;
     background-position: top;
     background-size: cover;
@@ -112,7 +112,7 @@ const WorkPage: NextPage<Props> = ({ projects }: Props) => {
   const bannerIcon = (
     <div tw="flex w-[3.75rem] h-[3.75rem] mb-2 md:(w-[4.5rem] h-[4.5rem]) xl:(w-[7rem] h-[7rem] mb-2)">
       <Image
-        src="/images/bubbles/work.png"
+        src="/images/bubbles/work.webp"
         width={322}
         height={325}
         loading="eager"

@@ -31,7 +31,7 @@ const ContactPage: NextPage = () => {
       tw="flex w-[5.625rem] h-[3.75rem] mb-2 md:(w-[6.75rem] h-[4.5rem]) xl:(w-[10.5rem] h-[7rem] mb-2)"
     >
       <Image
-        src="/images/bubbles/contact.png"
+        src="/images/bubbles/contact.webp"
         width={487}
         height={325}
         alt="Comic style speech bubble"

@@ -15,7 +15,7 @@ const Logo = styled(Link)`
 const Feet = styled.footer`
   ${tw`w-screen bg-white`};
   ${tw`border-t-[2px] border-grey-600 md:(border-t-[3px])`};
-  background: url("/images/halftone/grey.png"), #FFFDF5;
+  background: url("/images/halftone/grey.webp"), #FFFDF5;
   background-position: center;
   background-repeat: no-repeat;
   background-blend-mode: difference;
@@ -37,7 +37,7 @@ const Footer = () => {
       <Wrapper>
         <Logo href="/" aria-label="Home page">
           <Image
-            src="/images/logo.png"
+            src="/images/logo.webp"
             width={535}
             height={375}
             quality={100}

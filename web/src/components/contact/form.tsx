@@ -81,7 +81,7 @@ const ContactForm = () => {
         tw="w-[15.1875rem] h-[12.5rem] -mt-24 md:(w-[18.75rem] h-[15.5rem] -mt-36 -ml-20) xl:(w-[22.8125rem] h-[18.75rem] -mt-44) 2xl:(w-[28.125rem] h-[23.1875rem] -mt-56)"
       >
           <Image
-            src="/images/bubbles/hello.png"
+            src="/images/bubbles/hello.webp"
             width={550}
             height={453}
             alt="Comic style speech bubble with the words 'Say hello!"
