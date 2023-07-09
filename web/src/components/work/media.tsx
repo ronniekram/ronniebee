@@ -85,7 +85,7 @@ const Trigger = ({ project, name, idx, media }: TriggerProps) => {
 const Image = ({ img, alt }: { img: ImageObj; alt: string }) => {
   return (
     <div tw="w-full h-full flex object-cover object-center">
-      <SanityImage image={img} alt={alt} />
+      <SanityImage image={img} alt={alt} cover />
     </div>
   );
 };

@@ -18,7 +18,6 @@ const client = createClient({
 
 const SanityImage = ({ image, alt, lazy, cover }: ImageProps) => {
   const width = image.asset.metadata.dimensions.width;
-  console.log(width)
   const props = useNextSanityImage(client, image);
 
   return (
