@@ -1,8 +1,9 @@
 import type { AppProps } from "next/app";
 import { DefaultSeo } from "next-seo";
+import { useRouter } from "next/router";
 import tw, { styled } from "twin.macro";
 
-import { anime, karasuma } from "@/utility/fonts";
+import { anime, karasuma, mono } from "@/utility/fonts";
 import GlobalStyles from "@/styles/global";
 import config from "next-seo.config";
 import Nav from "@/components/layout/nav";
@@ -24,15 +25,23 @@ const Main = styled.main`
 `;
 
 export default function App({ Component, pageProps }: AppProps) {
+  const router = useRouter();
+
   return (
     <>
       <DefaultSeo {...config} />
       <GlobalStyles />
-      <Nav />
-      <Main className={`${anime.variable} ${karasuma.variable}`}>
+      {router.asPath === `/resume` ? (
         <Component {...pageProps} />
-      </Main>
-      <Footer />
+      ) : (
+        <>
+        <Nav />
+        <Main className={`${anime.variable} ${karasuma.variable} ${mono.variable}`}>
+          <Component {...pageProps} />
+        </Main>
+        <Footer />
+        </>
+      )}
     </>
   );
 }

@@ -1,4 +1,5 @@
 /* eslint-disable quotes */
+import { Source_Code_Pro as Source } from "next/font/google";
 import localFont from "next/font/local";
 
 export const anime = localFont({
@@ -35,4 +36,10 @@ export const karasuma = localFont({
     },
   ],
   variable: "--sans",
+});
+
+export const mono = Source({
+  display: "swap",
+  subsets: ["latin"],
+  variable: "--mono",
 });
