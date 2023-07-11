@@ -70,7 +70,7 @@ const resumeData: CV = {
   heading: {
     name: `Ronnie Boniface`,
     title: `Fullstack Developer`,
-    summary: `Are you busy this weekend? I have a new project with a tight deadline try a more powerful colour i think this should be fairly easy so if you just want to have a look, yet we are a non-profit organization.`,
+    summary: `Fullstack developer with a keen eye for design, a passion for creating accessible and user-friendly web applications and the ability to successfully collaborate with cross-functional teams.`
   },
   contact: [
     {
@@ -81,35 +81,59 @@ const resumeData: CV = {
     {
       icon: <FiExternalLink size={14} strokeWidth={1.25} />,
       label: `ronniebee.dev`,
-      href: `https://ronniebee.dev`,
+      href: `https://ronniebee.dev`
     },
     {
       icon: <FiLinkedin size={14} strokeWidth={1.25} />,
       label: `/in/arynn-boniface`,
-      href: `https://linkedin.com/in/arynn-boniface`,
+      href: `https://linkedin.com/in/arynn-boniface`
     },
     {
       icon: <FiGithub size={14} strokeWidth={1.25} />,
       label: `github.com/ronniekram`,
-      href: `https://github.com/ronniekram`,
+      href: `https://github.com/ronniekram`
     },
     {
       icon: <FiHome size={14} strokeWidth={1.25} />,
-      label: `Pittsburgh, PA`,
-    },
+      label: `Pittsburgh, PA`
+    }
   ],
   skills: {
     technical: {
-      front: [`TypeScript`, `Next.js`, `HTML5`, `CSS3`, `Figma`, `Accessibility`, `Responsive Design`],
-      back: [`Node.js`, `SQL`, `GraphQL`, `Prisma`, `Ruby on Rails`, `Headless CMS`],
+      front: [
+        `TypeScript`,
+        `Next.js`,
+        `HTML5`,
+        `CSS3`,
+        `Figma`,
+        `Accessibility`,
+        `Responsive Design`
+      ],
+      back: [
+        `Node.js`,
+        `SQL`,
+        `GraphQL`,
+        `Prisma`,
+        `Ruby on Rails`,
+        `Headless CMS`
+      ]
     },
-    soft: [`Technical writing`, `Non-technical writing`, `Communication`, `Time management`, `Flexibility`, `Attention to detail`, `Organization`, `Problem solving`],
+    soft: [
+      `Technical writing`,
+      `Non-technical writing`,
+      `Communication`,
+      `Time management`,
+      `Flexibility`,
+      `Attention to detail`,
+      `Organization`,
+      `Problem solving`
+    ]
   },
   certifications: [
     {
       type: `Certified Scrum Product Owner`,
-      source: `Project Brilliant`,
-    },
+      source: `Project Brilliant`
+    }
   ],
   experience: [
     {
@@ -118,15 +142,15 @@ const resumeData: CV = {
       location: `Pittsburgh, PA`,
       dates: {
         start: `Nov 2022`,
-        end: `Now`,
+        end: `Now`
       },
       responsibilities: [
-        `Templating projects to reduce development time, increase productivity and standardize development `,
+        `Templating projects and standardizing workflows `,
         `Managing and supporting the development team`,
-        `Working with design and project management teams to architect current and future projects`,
+        `Working with design and project management teams to architect future projects`,
         `Writing technical and client facing documentation`,
-        `Building projects and implementing new features on existing projects`,
-      ],
+        `Building projects and implementing new features on existing projects`
+      ]
     },
     {
       title: `Developer`,
@@ -134,13 +158,13 @@ const resumeData: CV = {
       location: `Pittsburgh, Pa`,
       dates: {
         start: `Nov 2021`,
-        end: `Nov 2022`,
+        end: `Nov 2022`
       },
       responsibilities: [
         `Built projects of varying sizes, from marketing site to full platform`,
         `Maintained large scale educational platforms`,
-        `Worked closely with design team to create beautiful websites with accessible UI/UX`,
-      ],
+        `Worked closely with design team to create beautiful websites with accessible UI/UX`
+      ]
     },
     {
       title: `Instructor`,
@@ -148,15 +172,14 @@ const resumeData: CV = {
       location: `Remote`,
       dates: {
         start: `Jan 2021`,
-        end: `Nov 2022`,
+        end: `Nov 2022`
       },
       responsibilities: [
         `Gave live lectures on: Ruby on Rails, vanilla JavaScript, React and Redux`,
-        `Supported over 20 students at a time and monitored student progress`,
         `Held weekly 1:1 meetings with students to improve conceptual understanding`,
         `Provided portfolio project support via open office hours and 1:1 meetings`,
-        `Assessed student understanding through portfolio project reviews`,
-      ],
+        `Assessed student understanding through portfolio project reviews`
+      ]
     },
     {
       title: `Technical Coach`,
@@ -164,15 +187,13 @@ const resumeData: CV = {
       location: `Remote`,
       dates: {
         start: `Aug 2020`,
-        end: `Jan 2021`,
+        end: `Jan 2021`
       },
       responsibilities: [
         `Provided 1:1 support with students to solve labs and improve conceptual understanding utilizing the Socratic method`,
-        `Solved local environment issues for both iOS and Ubuntu`,
-        `Collaborated with other coaches to ensure the best student experience`,
-        `Managed student queue via chat`,
-      ],
-    },
+        `Solved local environment issues for both iOS and Ubuntu`
+      ]
+    }
   ],
   education: [
     {
@@ -180,26 +201,26 @@ const resumeData: CV = {
       location: `Online`,
       dates: {
         start: `Mar 2020`,
-        end: `Aug 2020`,
+        end: `Aug 2020`
       },
       degree: {
         concentration: `Fullstack Development`,
-        type: `Certificate`,
-      },
+        type: `Certificate`
+      }
     },
     {
       institute: `The Art Institute`,
       location: `Pittsburgh, PA`,
       dates: {
         start: `Feb 2020`,
-        end: `Feb 2012`,
+        end: `Feb 2012`
       },
       degree: {
         concentration: `Culinary Arts`,
-        type: `Associates`,
-      },
-    },
-  ],
+        type: `Associates`
+      }
+    }
+  ]
 };
 
 export default resumeData;

@@ -8,8 +8,8 @@ export const Heading = styled.div`
   ${tw`text-grey-500`};
   ${tw`font-mono font-bold uppercase`};
   ${tw`tracking-[0.75px]`};
-  ${tw`px-4 py-1.5`};
-  ${tw`h-[2.25rem]`};
+  ${tw`px-4 py-1`};
+  ${tw`h-[2rem]`};
   ${tw`border-y border-grey-500`};
 `;
 
@@ -20,7 +20,7 @@ const Body = styled.div`
   ${tw`border-grey-500 border-b`};
 
   h3 {
-    ${tw`text-xs leading-[normal]`};
+    ${tw`text-sm leading-[normal]`};
     ${tw`font-bold uppercase`};
   }
 `;
@@ -30,7 +30,7 @@ const UL = styled.ul`
 
   ${tw`font-sans`};
   ${tw`ml-2`};
-  ${tw`text-[0.625rem] tracking-[0.25px]`};
+  ${tw`text-xs leading-[normal] tracking-[0.25px]`};
   ${tw`flex flex-col space-y-1`};
 `;
 
@@ -42,19 +42,17 @@ export const Job = ({ position }: { position: WorkExperience }) => {
       <div>
         <div tw="w-full flex items-center justify-between mb-0.5">
           <h3>{title}</h3>
-          <p tw="text-xs leading-[normal] font-bold uppercase">
+          <p tw="text-sm leading-[normal] font-bold uppercase">
             {dates.start} - {dates.end}
           </p>
         </div>
-        <p tw="text-[0.625rem] text-grey-400 font-medium tracking-[0.5px]">
+        <p tw="text-xs leading-[normal] text-grey-400 font-medium tracking-[0.5px]">
           {company} / {location}
         </p>
       </div>
       <UL>
         {responsibilities.map((r, i) => (
-          <li key={`${title}-${i}`}>
-            {r}
-          </li>
+          <li key={`${title}-${i}`}>{r}</li>
         ))}
       </UL>
     </Body>
@@ -65,15 +63,13 @@ const Experience = ({ jobs }: { jobs: WorkExperience[] }) => {
   return (
     <section>
       <Heading>
-        <h2>
-          Work Experience
-        </h2>
+        <h2>Work Experience</h2>
       </Heading>
       {jobs.map((job, i) => (
         <Job position={job} key={`job-${i}`} />
       ))}
     </section>
-  )
+  );
 };
 
 export default Experience;

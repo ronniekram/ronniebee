@@ -11,7 +11,7 @@ const Body = styled.div`
   ${tw`border-grey-500`};
 
   h3 {
-    ${tw`text-xs leading-[normal]`};
+    ${tw`text-sm leading-[normal]`};
     ${tw`font-bold uppercase`};
   }
 `;
@@ -27,19 +27,15 @@ const ResumeEducation = ({ education }: { education: Education[] }) => {
           <div key={ed.institute}>
             <div tw="w-full flex items-center justify-between mb-0.5">
               <h3>{ed.institute}</h3>
-              <p tw="text-xs leading-[normal] font-bold uppercase">
+              <p tw="text-sm leading-[normal] font-bold uppercase">
                 {ed.dates.start} - {ed.dates.end}
               </p>
             </div>
-            <div
-              tw="w-full flex items-center justify-between text-[0.625rem] text-grey-400 font-medium tracking-[0.5px]"
-            >
+            <div tw="w-full flex items-center justify-between text-xs leading-[1.15rem] text-grey-400 font-medium tracking-[0.5px]">
               <p>
                 {ed.degree.concentration}, {ed.degree.type}
               </p>
-              <p>
-                {ed.location}
-              </p>
+              <p>{ed.location}</p>
             </div>
           </div>
         ))}

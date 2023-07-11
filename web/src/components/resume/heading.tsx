@@ -4,7 +4,7 @@ import { FiX } from "react-icons/fi";
 import { Heading } from "@/utility/resume-data";
 
 //! ----------> STYLES <----------
-const Container =  tw.header`w-full tracking-[0.5px]`;
+const Container = tw.header`w-full tracking-[0.5px]`;
 
 const Bar = styled.div`
   ${tw`flex justify-between items-center`};
@@ -15,7 +15,7 @@ const Bar = styled.div`
 `;
 
 const Text = styled.div`
-  ${tw`w-full mx-auto px-5 py-[0.875rem] mt-2`};
+  ${tw`w-full mx-auto px-5 py-3 mt-2`};
   ${tw`grid grid-cols-[auto, 46%]`};
   ${tw`font-sans text-grey-500`};
 
@@ -28,7 +28,7 @@ const Text = styled.div`
   }
 
   p {
-    ${tw`text-2xs leading-[1.125rem]`};
+    ${tw`text-xs leading-[1.125rem]`};
     ${tw`tracking-[unset]`};
   }
 `;
@@ -41,9 +41,7 @@ const ResumeHeader = ({ name, title, summary }: Heading) => {
         <div tw="w-full text-center">
           <p>Ronnie-boniface-resume.pdf</p>
         </div>
-        <div
-          tw="w-[1.125rem] h-[1.125rem] flex items-center justify-center border-white border rounded-[1px]"
-        >
+        <div tw="w-[1.125rem] h-[1.125rem] flex items-center justify-center border-white border rounded-[1px]">
           <FiX size={16} strokeWidth={1} />
         </div>
       </Bar>
@@ -53,11 +51,8 @@ const ResumeHeader = ({ name, title, summary }: Heading) => {
           <h1>{name}</h1>
           <h2>{title}</h2>
         </div>
-        <p>
-          {summary}
-        </p>
+        <p>{summary}</p>
       </Text>
-
     </Container>
   );
 };

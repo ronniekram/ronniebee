@@ -5,16 +5,16 @@ import { Heading } from "./contact";
 
 //! ----------> STYLES <----------
 const SoftUL = styled.ul`
-  ${tw`w-full px-4 pt-5 pb-6`};
+  ${tw`w-full px-4 py-4`};
   ${tw`font-mono font-medium uppercase`};
-  ${tw`text-2xs tracking-[0.5px]`};
+  ${tw`text-xs leading-[1.15rem] tracking-[0.5px]`};
   ${tw`flex flex-col space-y-[0.3125rem]`};
 `;
 
 const TechUL = styled.ul`
-  ${tw`w-full px-4 pt-5 pb-6`};
+  ${tw`w-full px-4 py-4`};
   ${tw`font-mono font-medium uppercase`};
-  ${tw`text-2xs tracking-[0.5px]`};
+  ${tw`text-xs leading-[1.15rem] tracking-[0.5px]`};
   ${tw`grid grid-cols-2`};
 
   div {
@@ -27,7 +27,7 @@ export const TechnicalSkills = ({ front, back }: Technical) => {
   return (
     <section>
       <Heading>
-          <h3>Technical Skills</h3>
+        <h3>Technical Skills</h3>
       </Heading>
       <TechUL>
         <div>
@@ -53,9 +53,7 @@ export const SoftSkills = ({ skills }: { skills: string[] }) => {
       </Heading>
       <SoftUL>
         {skills.map((skill, i) => (
-          <li key={`soft-${i}`}>
-            {skill}
-          </li>
+          <li key={`soft-${i}`}>{skill}</li>
         ))}
       </SoftUL>
     </section>

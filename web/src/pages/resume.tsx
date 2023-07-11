@@ -19,7 +19,7 @@ const Page = styled.main`
 `;
 
 const Wrapper = styled.article`
-  ${tw`w-full h-full flex flex-col space-y-2`};
+  ${tw`w-full h-full flex flex-col space-y-1`};
   ${tw`border border-grey-500`};
 `;
 

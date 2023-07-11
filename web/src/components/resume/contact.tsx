@@ -8,7 +8,7 @@ export const Heading = styled.div`
   ${tw`bg-grey-500 text-white`};
   ${tw`font-mono font-semi uppercase`};
   ${tw`tracking-[0.75px]`};
-  ${tw`px-4 py-1.5`};
+  ${tw`px-4 py-1`};
 `;
 
 const A = tw.a`underline`;
@@ -16,11 +16,11 @@ const A = tw.a`underline`;
 const ListItem = styled.li`
   ${tw`flex items-center space-x-1`};
   ${tw`font-mono font-semi uppercase`};
-  ${tw`text-2xs tracking-[0.65px]`};
+  ${tw`text-xs leading-[1.25rem] tracking-[0.65px]`};
 `;
 
 const UL = styled.ul`
-  ${tw`w-full px-4 pt-5 pb-6`};
+  ${tw`w-full px-4 py-4`};
   ${tw`flex flex-col space-y-2.5`};
 `;
 
@@ -37,17 +37,11 @@ const ResumeContact = ({ items }: { items: Contact[] }) => {
             {x.icon}
             <p>
               {x.href ? (
-                <A
-                  href={x.href}
-                  target="_blank"
-                  rel="noreferrer"
-                >
+                <A href={x.href} target="_blank" rel="noreferrer">
                   {x.label}
                 </A>
-              ): (
-                <>
-                  {x.label}
-                </>
+              ) : (
+                <>{x.label}</>
               )}
             </p>
           </ListItem>
