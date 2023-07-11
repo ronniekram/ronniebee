@@ -21,9 +21,7 @@ const ResumeDownload = () => {
 
   return (
     <Button
-      href={`/api/resume?url=${
-        process.env.NEXT_PUBLIC_SITE_URL + router.asPath
-      }`}
+      href={`/api/resume?url=${process.env.NEXT_PUBLIC_SITE_URL}/resume`}
       download={`ronnie-boniface-resume-${format(new Date(), `M-dd-yy`)}.pdf`}
     >
       <FiDownload
