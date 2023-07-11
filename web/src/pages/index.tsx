@@ -41,7 +41,14 @@ const Home: NextPage = () => {
         onMouseEnter={startHover}
         onMouseLeave={cancelHover}
       >
-        <DevBurst />
+        {/* <DevBurst /> */}
+        <Image
+          src="/images/dev.webp"
+          alt="Fullstack Developer"
+          width={525}
+          height={426}
+          style={{ objectFit: `cover` }}
+        />
       </a.div>
 
       <div tw="mx-auto flex flex-col w-[95%] -mt-12 relative z-10 md:(w-[91%] -mt-16) lg:(-mt-24) xl:(w-[90%]) 2xl:(w-[87%] -mt-48)">
@@ -55,6 +62,7 @@ const Home: NextPage = () => {
           alt="Ronnie Boniface"
           quality={100}
           loading="eager"
+          priority
         />
       </div>
 
@@ -64,7 +72,14 @@ const Home: NextPage = () => {
         onMouseEnter={startCityHover}
         onMouseLeave={cancelCityHover}
       >
-        <CityBurst />
+        {/* <CityBurst /> */}
+        <Image
+          src="/images/pgh.webp"
+          alt="Pittsburgh, PA"
+          width={250}
+          height={203}
+          style={{ objectFit: `cover` }}
+        />
       </a.div>
     </Wrapper>
   );
