@@ -3,6 +3,7 @@ import chromium from "@sparticuz/chromium-min";
 import puppeteer from "puppeteer-core";
 
 const handler: NextApiHandler = async (req: NextApiRequest, res: NextApiResponse) => {
+
   try {
     const browser = await puppeteer.launch({
       args: chromium.args,
@@ -28,7 +29,7 @@ const handler: NextApiHandler = async (req: NextApiRequest, res: NextApiResponse
     await browser.close();
   } catch (error: any) {
     console.log(error);
-    return res.status(error.statusCode || 500).json({ error: error });
+    return res.status(error.statusCode || 500).json({ error: error.message });
   };
 };
 
