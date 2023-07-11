@@ -1,3 +1,4 @@
+import { NextPage } from "next";
 import tw, { styled } from "twin.macro";
 
 import { karasuma, mono } from "@/utility/fonts";
@@ -23,34 +24,30 @@ const Wrapper = styled.article`
 `;
 
 //! ----------> COMPONENTS <----------
-const Resume = () => {
-  const {
-    heading,
-    contact,
-    skills,
-    certifications,
-    experience,
-    education
-  } = resumeData;
+const Resume: NextPage = () => {
+  const { heading, contact, skills, certifications, experience, education } =
+    resumeData;
 
   return (
-    <Page className={`${karasuma.variable} ${mono.variable}`}>
-      <Wrapper>
-        <ResumeHeader {...heading} />
-        <div tw="h-full grid grid-cols-[37.7%, auto]">
-          <div tw="h-full">
-            <ResumeContact items={contact} />
-            <TechnicalSkills {...skills.technical} />
-            <SoftSkills skills={skills.soft} />
-            <Certifications certs={certifications} />
+    <>
+      <Page className={`${karasuma.variable} ${mono.variable}`}>
+        <Wrapper>
+          <ResumeHeader {...heading} />
+          <div tw="h-full grid grid-cols-[37.7%, auto]">
+            <div tw="h-full">
+              <ResumeContact items={contact} />
+              <TechnicalSkills {...skills.technical} />
+              <SoftSkills skills={skills.soft} />
+              <Certifications certs={certifications} />
+            </div>
+            <div tw="border-l border-grey-500 h-full">
+              <Experience jobs={experience} />
+              <ResumeEducation education={education} />
+            </div>
           </div>
-          <div tw="border-l border-grey-500 h-full">
-            <Experience jobs={experience} />
-            <ResumeEducation education={education} />
-          </div>
-        </div>
-      </Wrapper>
-    </Page>
+        </Wrapper>
+      </Page>
+    </>
   );
 };
 

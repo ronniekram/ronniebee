@@ -18,7 +18,7 @@ const Button = styled.a`
 const ResumeDownload = () => {
   return (
     <Button
-      href="/api/resume"
+      href="/api/pdf"
       download={`ronnie-boniface-resume-${format(new Date(), `M-dd-yy`)}.pdf`}
     >
       <FiDownload
