@@ -22,9 +22,6 @@ dependencies:
   '@sanity/image-url':
     specifier: ^1.0.2
     version: 1.0.2
-  '@sparticuz/chromium-min':
-    specifier: ^114.0.0
-    version: 114.0.0
   '@types/node':
     specifier: 18.16.3
     version: 18.16.3
@@ -3317,16 +3314,6 @@ packages:
     resolution: {integrity: sha512-V4BG07kuYSUkTCSBHG8G8TNhM+F19jXFWnQtzj+we8DrkpSBCee9Z3Ms8yiGer/dlmhe35/Xdgyo3/0rQKg7YA==}
     dependencies:
       '@sinonjs/commons': 3.0.0
-    dev: false
-
-  /@sparticuz/chromium-min@114.0.0:
-    resolution: {integrity: sha512-yIv8DFEt7kak+zQr5HM5WJ5loPo/J5qTR/1sqaEk7IM3BaXqiJRZAQQ5kVyuOErOcbGfruNFUGXUxLm5XdcXIQ==}
-    engines: {node: '>= 16'}
-    dependencies:
-      follow-redirects: 1.15.2(debug@4.3.4)
-      tar-fs: 2.1.1
-    transitivePeerDependencies:
-      - debug
     dev: false
 
   /@swc/helpers@0.5.1:

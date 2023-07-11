@@ -1,6 +1,4 @@
-/* eslint-disable no-secrets/no-secrets */
 import { NextApiRequest, NextApiResponse, NextApiHandler } from "next";
-import chromium from "@sparticuz/chromium-min";
 import puppeteer from "puppeteer-core";
 
 const handler: NextApiHandler = async (req: NextApiRequest, res: NextApiResponse) => {
