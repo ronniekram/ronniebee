@@ -10,9 +10,8 @@ const handler: NextApiHandler = async (req: NextApiRequest, res: NextApiResponse
     });
 
     const page = await browser.newPage();
-    const pdfURL = `${process.env.NEXT_PUBLIC_SITE_URL}/resume`;
 
-    await page.goto(pdfURL, {
+    await page.goto(`${process.env.NEXT_PUBLIC_SITE_URL}/resume`, {
       waitUntil: `networkidle0`,
     });
 
