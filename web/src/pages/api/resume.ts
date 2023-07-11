@@ -8,25 +8,29 @@ const handler: NextApiHandler = async (req: NextApiRequest, res: NextApiResponse
     const browser = await puppeteer.launch({
       args: chromium.args,
       executablePath: await chromium.executablePath(process.env.DO_CHROMIUM_URL),
+      ignoreHTTPSErrors: true,
+      headless: true
     });
 
     const page = await browser.newPage();
 
     await page.goto(`${process.env.NEXT_PUBLIC_SITE_URL}/resume`, {
-      waitUntil: `networkidle0`,
+      waitUntil: `networkidle2`,
     });
 
     await page.emulateMediaType(`screen`);
 
     const pdf = await page.pdf({
-      path: `/tmp/resume.pdf`,
+      path: `resume.pdf`,
       printBackground: true,
       format: `letter`,
     });
 
+    await page.close();
+    await browser.close();
+
     res.send(pdf);
 
-    await browser.close();
   } catch (error: any) {
     console.log(error);
     return res.status(error.statusCode || 500).json({ error: error.message });

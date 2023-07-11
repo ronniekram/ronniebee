@@ -1,8 +1,5 @@
 /* eslint-disable unicorn/numeric-separators-style */
-import type {
-  NextPage,
-  GetStaticProps,
-} from "next";
+import type { NextPage, GetStaticProps } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { NextSeo } from "next-seo";
@@ -31,7 +28,7 @@ type Props = {
 //! ----------> STYLES <----------
 const halftoneTop = css`
   &::after {
-    content: '';
+    content: "";
     ${tw`w-full h-full absolute`};
     background-image: url("/images/halftone/half-down.webp");
     background-repeat: no-repeat;
@@ -43,7 +40,7 @@ const halftoneTop = css`
 
 const halftoneBottom = css`
   &::after {
-    content: '';
+    content: "";
     ${tw`w-full h-full absolute`};
     background-image: url("/images/halftone/yellow.webp");
     background-repeat: no-repeat;
@@ -55,7 +52,7 @@ const halftoneBottom = css`
 
 const halftoneCircle = css`
   &::after {
-    content: '';
+    content: "";
     ${tw`w-full h-full absolute`};
     background-image: url("/images/halftone/outer-circle.webp");
     background-repeat: no-repeat;
@@ -140,7 +137,11 @@ const WorkPage: NextPage<Props> = ({ projects }: Props) => {
                 href={`/work/${project.slug.current}`}
                 style={{ objectFit: `cover`, objectPosition: `center` }}
               >
-                <SanityImage image={project.thumbnail} alt={project.name} cover />
+                <SanityImage
+                  image={project.thumbnail}
+                  alt={project.name}
+                  cover
+                />
               </Panel>
             ))}
           </Featured>
@@ -153,7 +154,12 @@ const WorkPage: NextPage<Props> = ({ projects }: Props) => {
                 style={{ objectFit: `cover`, objectPosition: `center` }}
                 css={[i === 1 && halftoneTop]}
               >
-                <SanityImage image={project.thumbnail} alt={project.name} lazy cover />
+                <SanityImage
+                  image={project.thumbnail}
+                  alt={project.name}
+                  lazy
+                  cover
+                />
               </Panel>
             ))}
           </Second>
@@ -166,7 +172,12 @@ const WorkPage: NextPage<Props> = ({ projects }: Props) => {
                 style={{ objectFit: `cover`, objectPosition: `center` }}
                 css={[i === 0 && halftoneBottom, i === 2 && halftoneCircle]}
               >
-                <SanityImage image={project.thumbnail} alt={project.name} lazy cover />
+                <SanityImage
+                  image={project.thumbnail}
+                  alt={project.name}
+                  lazy
+                  cover
+                />
               </Panel>
             ))}
           </Remaining>
@@ -193,7 +204,7 @@ export const getStaticProps: GetStaticProps = async () => {
 
   const props = {
     projects,
-    revalidate: 60,
+    revalidate: 60
   };
 
   return { props };
