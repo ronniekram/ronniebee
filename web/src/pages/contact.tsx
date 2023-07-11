@@ -27,9 +27,7 @@ const Content = styled.div`
 //! ----------> COMPONENTS <----------
 const ContactPage: NextPage = () => {
   const bannerIcon = (
-    <div
-      tw="flex w-[5.625rem] h-[3.75rem] mb-2 md:(w-[6.75rem] h-[4.5rem]) xl:(w-[10.5rem] h-[7rem] mb-2)"
-    >
+    <div tw="flex w-[5.625rem] h-[3.75rem] mb-2 md:(w-[6.75rem] h-[4.5rem]) xl:(w-[10.5rem] h-[7rem] mb-2)">
       <Image
         src="/images/bubbles/contact.webp"
         width={487}

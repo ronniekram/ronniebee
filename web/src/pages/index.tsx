@@ -6,7 +6,6 @@ import { useSpring, animated as a } from "react-spring";
 
 import { DevBurst, CityBurst } from "@/assets/burst";
 
-
 //! ----------> STYLES <----------
 const Wrapper = styled.section`
   ${tw`mx-auto w-[fit-content] h-[fit-content] max-w-[72.75rem] xl:(w-[78%])`};
@@ -21,12 +20,12 @@ const Home: NextPage = () => {
 
   const spring = useSpring({
     transform: isHover ? `scale(1.2)` : `scale(1)`,
-    config: { tension: 300, friction: 10 },
+    config: { tension: 300, friction: 10 }
   });
 
   const citySpring = useSpring({
     transform: isCityHover ? `rotate(360deg)` : `rotate(0deg)`,
-    config: { tension: 200, friction: 15 },
+    config: { tension: 200, friction: 15 }
   });
 
   const startHover = () => setIsHover(true);

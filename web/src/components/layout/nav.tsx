@@ -14,7 +14,7 @@ import { anime } from "@/utility/fonts";
 import Mobile from "./mobile";
 
 //! ----------> STYLES <----------
-const Wrapper = styled.section`
+const Wrapper = styled.div`
   ${tw`w-full max-w-[86rem] mx-auto bg-white text-grey-600`};
   ${tw`antialiased font-bold`};
   ${tw`text-xl xl:(text-2xl)`};
@@ -47,16 +47,16 @@ const Nav = () => {
 
   const spring = useSpring({
     to: { top: show ? 0 : -bounds.height, zIndex: show ? 50 : 20 },
-    config: { ...config.slow, clamp: true },
+    config: { ...config.slow, clamp: true }
   });
 
   const mobileSpring = useSpring({
     height: open ? mobileHeight : 0,
     zIndex: 10,
-    top: bounds.height,
+    top: bounds.height
   });
 
-    useEffect(() => {
+  useEffect(() => {
     if (scroll.y > 100 && scroll.y - scroll.lastY > 0) {
       setShow(false);
     } else {
@@ -73,39 +73,48 @@ const Nav = () => {
   return (
     <RemoveScroll enabled={open}>
       <>
-      <a.div style={spring} tw="bg-white w-screen fixed border-b-2 border-grey-600 shadow-sm md:(shadow-md)">
-        <Wrapper ref={ref} className={anime.variable}>
-          <Link
-            href="/"
-            prefetch={false}
-            aria-label="Home"
-            tw="transition duration-300 ease-in-out flex w-[4.875rem] h-[3.125rem] xl:(w-[5.8125rem] h-[3.75rem]) hover:(scale-[110%])"
-          >
-            <Image
-              src="/images/rb.webp"
-              width={449}
-              height={291}
-              quality={100}
-              alt=""
-            />
-          </Link>
+        <a.div
+          style={spring}
+          tw="bg-white w-screen fixed border-b-2 border-grey-600 shadow-sm md:(shadow-md)"
+        >
+          <Wrapper ref={ref} className={anime.variable}>
+            <Link
+              href="/"
+              prefetch={false}
+              aria-label="Home"
+              tw="transition duration-300 ease-in-out flex w-[4.875rem] h-[3.125rem] xl:(w-[5.8125rem] h-[3.75rem]) hover:(scale-[110%])"
+            >
+              <Image
+                src="/images/rb.webp"
+                width={449}
+                height={291}
+                quality={100}
+                alt=""
+              />
+            </Link>
 
-          <Items>
-            <Link href="/work" prefetch={false}>Work</Link>
-            <Link href="/about" prefetch={false}>About</Link>
-            <Link href="/contact" prefetch={false}>Contact</Link>
-          </Items>
+            <Items>
+              <Link href="/work" prefetch={false}>
+                Work
+              </Link>
+              <Link href="/about" prefetch={false}>
+                About
+              </Link>
+              <Link href="/contact" prefetch={false}>
+                Contact
+              </Link>
+            </Items>
 
-          <div tw="md:(hidden)">
-            <Burger
-              toggled={open}
-              toggle={setOpen}
-              size={32}
-              label={open ? `Hide menu` : `Open menu`}
-            />
-          </div>
-        </Wrapper>
-      </a.div>
+            <div tw="md:(hidden)">
+              <Burger
+                toggled={open}
+                toggle={setOpen}
+                size={32}
+                label={open ? `Hide menu` : `Open menu`}
+              />
+            </div>
+          </Wrapper>
+        </a.div>
 
         <a.div style={mobileSpring} tw="overflow-hidden fixed z-[100]">
           <Mobile setHeight={setMobileHeight} />
@@ -116,4 +125,3 @@ const Nav = () => {
 };
 
 export default Nav;
-

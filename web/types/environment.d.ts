@@ -6,6 +6,8 @@ declare global {
       NEXT_PUBLIC_SANITY_DATASET: string;
       BREVO_API_KEY: string;
       SECRET_TOKEN: string;
+      DO_CHROMIUM_URL: string;
+      BLESS_TOKEN: string;
     }
   }
 }

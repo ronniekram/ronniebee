@@ -1,9 +1,5 @@
 /* eslint-disable unicorn/numeric-separators-style */
-import type {
-  NextPage,
-  GetStaticProps,
-  GetStaticPaths,
-} from "next";
+import type { NextPage, GetStaticProps, GetStaticPaths } from "next";
 import Link from "next/link";
 import { NextSeo } from "next-seo";
 import { groq } from "next-sanity";
@@ -60,7 +56,9 @@ const NavWrapper = styled.div`
 
 //! ----------> COMPONENTS <----------
 const ProjectPage: NextPage<Props> = ({ project, slugs }: Props) => {
-  const currentIdx: number = slugs.findIndex((slugObj) => slugObj.slug.current === project?.slug?.current);
+  const currentIdx: number = slugs.findIndex(
+    (slugObj) => slugObj.slug.current === project?.slug?.current
+  );
 
   const prevProject = (): number => {
     if (slugs[currentIdx - 1]) return currentIdx - 1;
@@ -80,7 +78,7 @@ const ProjectPage: NextPage<Props> = ({ project, slugs }: Props) => {
     creative: project.creative,
     devs: project.devs,
     github: project.github,
-    live: project.live,
+    live: project.live
   };
 
   return (
@@ -104,7 +102,6 @@ const ProjectPage: NextPage<Props> = ({ project, slugs }: Props) => {
           </div>
           <Media name={project.name} media={project.media} />
         </Project>
-
       </Wrapper>
       {/* NAVIGATION */}
       <NavWrapper>
@@ -159,24 +156,28 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     project: {
       ...project[0]
     },
-    slugs,
+    slugs
   };
 
-  return { props, revalidate: 60 };
+  return {
+    props,
+    revalidate: 60
+  };
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const client = getClient();
   const slugs = await client.fetch(pathsQuery);
 
-  const paths = slugs?.map((project: { slug: { current: string; } }) => ({
-    params: {
-      slug: project.slug.current,
-    },
-  })) || [];
+  const paths =
+    slugs?.map((project: { slug: { current: string } }) => ({
+      params: {
+        slug: project.slug.current
+      }
+    })) || [];
 
   return {
     paths,
-    fallback: `blocking`,
+    fallback: `blocking`
   };
 };
