@@ -71,7 +71,7 @@ dependencies:
     specifier: ^6.0.0
     version: 6.0.0(next@13.3.2)(react-dom@18.2.0)(react@18.2.0)
   puppeteer-core:
-    specifier: 18.0.5
+    specifier: ^18.0.5
     version: 18.0.5
   react:
     specifier: 18.2.0

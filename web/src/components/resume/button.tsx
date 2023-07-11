@@ -1,3 +1,4 @@
+import { useRouter } from "next/router";
 import tw, { styled } from "twin.macro";
 import format from "date-fns/format";
 import { FiDownload } from "react-icons/fi";
@@ -16,9 +17,13 @@ const Button = styled.a`
 
 //! ----------> COMPONENTS <----------
 const ResumeDownload = () => {
+  const router = useRouter();
+
   return (
     <Button
-      href="/api/resume"
+      href={`/api/resume?url=${
+        process.env.NEXT_PUBLIC_SITE_URL + router.asPath
+      }`}
       download={`ronnie-boniface-resume-${format(new Date(), `M-dd-yy`)}.pdf`}
     >
       <FiDownload

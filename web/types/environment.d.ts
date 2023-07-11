@@ -7,6 +7,7 @@ declare global {
       BREVO_API_KEY: string;
       SECRET_TOKEN: string;
       DO_CHROMIUM_URL: string;
+      BLESS_TOKEN: string;
     }
   }
 }
