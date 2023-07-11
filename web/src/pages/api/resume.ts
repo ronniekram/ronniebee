@@ -16,6 +16,7 @@ const handler: NextApiHandler = async (req: NextApiRequest, res: NextApiResponse
 
     await page.goto(`${process.env.NEXT_PUBLIC_SITE_URL}/resume`, {
       waitUntil: `networkidle2`,
+      timeout: 0,
     });
 
     await page.emulateMediaType(`screen`);
