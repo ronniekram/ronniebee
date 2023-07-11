@@ -8,13 +8,14 @@ import config from "next-seo.config";
 import Banner from "@/components/shared/page-banner";
 import copy from "@/components/about/copy";
 import { Name, PersonalTop, PersonalBottom, Professional, Skills, SkillList, Lightning, More, End } from "@/components/about/sections";
+import ResumeDownload from "@/components/resume/button";
 
 //! ----------> STYLES <----------
 const Wrapper = styled.div`
   ${tw`mx-auto w-full max-w-[86rem]`};
-  ${tw`flex flex-col space-y-8`};
+  ${tw`flex flex-col space-y-6`};
   ${tw`md:(items-end)`};
-  ${tw`pt-12 pb-16 md:(pt-16 pb-20 space-y-10) lg:(pb-24) xl:(pb-36 space-y-14)`};
+  ${tw`pt-12 pb-16 md:(pt-16 pb-20 space-y-8) lg:(pb-24) xl:(pb-36 space-y-10)`};
 `;
 
 //! ----------> COMPONENTS <----------
@@ -95,6 +96,7 @@ const AboutPage: NextPage = () => {
       />
       <Wrapper>
         <Banner label="About" icon={bannerIcon} />
+        <ResumeDownload />
         <div tw="flex flex-col space-y-1.5 md:(space-y-2.5)">
           {width >= 1280 ? <Large /> : <Small />}
         </div>
