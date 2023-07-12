@@ -123,7 +123,7 @@ const AboutPage: NextPage = () => {
         <Banner label="About" icon={bannerIcon} />
         <ResumeDownload />
         <div tw="flex flex-col space-y-1.5 md:(space-y-2.5)">
-          {width >= 1280 ? <Large /> : <Small />}
+          {width <= 1280 ? <Small /> : <Large />}
         </div>
       </Wrapper>
     </>
