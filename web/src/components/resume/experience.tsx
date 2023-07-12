@@ -26,10 +26,10 @@ const Body = styled.div`
 `;
 
 const UL = styled.ul`
-  ${tw`w-full list-inside list-disc`};
+  ${tw`w-full list-outside list-disc`};
 
   ${tw`font-sans`};
-  ${tw`ml-2`};
+  ${tw`ml-3`};
   ${tw`text-xs leading-[normal] tracking-[0.25px]`};
   ${tw`flex flex-col space-y-1`};
 `;
