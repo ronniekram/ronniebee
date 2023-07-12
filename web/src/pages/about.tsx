@@ -71,7 +71,7 @@ const Small = () => {
         <Name />
         <PersonalTop title={copy.personal.title} body={copy.personal.body} />
       </div>
-
+      {/* PROBLEM HERE  */}
       <PersonalBottom body={copy.personal2.body} />
       <Professional
         title={copy.professional.title}
@@ -86,7 +86,7 @@ const Small = () => {
           soft
         />
       </div>
-
+      {/* PROBLEM HERE  */}
       <div tw="grid gap-x-2 grid-cols-[27.5%, 70.25%] md:(grid-cols-[35%, 63.8%]) lg:(grid-cols-[30%, 68.6%])">
         <Lightning />
         <More title={copy.more.title} list={copy.more.list} />
@@ -122,8 +122,8 @@ const AboutPage: NextPage = () => {
       <Wrapper>
         <Banner label="About" icon={bannerIcon} />
         <ResumeDownload />
-        <div tw="flex flex-col space-y-1.5 md:(space-y-2.5)">
-          {width <= 1280 ? <Small /> : <Large />}
+        <div tw="grid grid-cols-1 gap-y-1.5 md:(gap-y-2.5)">
+          {width < 1279 ? <Small /> : <Large />}
         </div>
       </Wrapper>
     </>
