@@ -30,10 +30,6 @@ export const karasuma = localFont({
       path: "./fonts/karasuma/bold.woff",
       weight: "700",
     },
-    {
-      path: "./fonts/karasuma/black.woff",
-      weight: "900",
-    },
   ],
   variable: "--sans",
 });
