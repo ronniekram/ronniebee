@@ -15,8 +15,8 @@ const Bar = styled.div`
 `;
 
 const Text = styled.div`
-  ${tw`w-full mx-auto px-5 py-3 mt-2`};
-  ${tw`grid grid-cols-[auto, 46%]`};
+  ${tw`w-full mx-auto px-5 py-2 mt-2`};
+  ${tw`grid grid-cols-[auto, 53%]`};
   ${tw`font-sans text-grey-500`};
 
   h1 {
