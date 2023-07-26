@@ -5,7 +5,7 @@ import { Heading } from "./experience";
 
 //! ----------> STYLES <----------
 const Body = styled.div`
-  ${tw`w-full h-full px-5 pt-4 pb-6`};
+  ${tw`w-full h-full px-5 pt-3 pb-5`};
   ${tw`font-mono text-grey-500`};
   ${tw`flex flex-col space-y-3`};
   ${tw`border-grey-500`};

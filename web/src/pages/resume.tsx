@@ -14,7 +14,7 @@ import ResumeEducation from "@/components/resume/education";
 const Page = styled.main`
   ${tw`bg-white`};
   ${tw`w-[8.5in] h-[11in]`};
-  ${tw`px-6 py-8`};
+  ${tw`px-3 py-4`};
   ${tw`antialiased`};
 `;
 

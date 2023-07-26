@@ -145,11 +145,11 @@ const resumeData: CV = {
         end: `Now`
       },
       responsibilities: [
-        `Templating projects and standardizing workflows `,
-        `Managing and supporting the development team`,
-        `Working with design and project management teams to architect future projects`,
-        `Writing technical and client facing documentation`,
-        `Building projects and implementing new features on existing projects`
+        `Creating project templates and standardized workflows to improve development speed and efficiency`,
+        `Managing and supporting the development team through project lifecycles`,
+        `Collaborating with design and project management teams to complete projects to stakeholder standards and design specifications`,
+        `Performing upkeep on existing projects and platforms to reduce technical debt`,
+        `Writing project briefs to aid project management in technical communication with stakeholders on new projects`
       ]
     },
     {
@@ -161,9 +161,10 @@ const resumeData: CV = {
         end: `Nov 2022`
       },
       responsibilities: [
-        `Built projects of varying sizes, from marketing site to full platform`,
-        `Maintained large scale educational platforms`,
-        `Worked closely with design team to create beautiful websites with accessible UI/UX`
+        `Built projects of varying sizes, from single page marketing sites to full platforms, for a range of markets`,
+        `Wrote technical documentation for current and future developer reference`,
+        `Wrote client facing documentation related to content and user management`,
+        `Maintained and implemented new features on large scale educational platforms with over 1 million users`
       ]
     },
     {
@@ -175,10 +176,10 @@ const resumeData: CV = {
         end: `Nov 2022`
       },
       responsibilities: [
-        `Gave live lectures on: Ruby on Rails, vanilla JavaScript, React and Redux`,
-        `Held weekly 1:1 meetings with students to improve conceptual understanding`,
+        `Gave bi-weekly live lectures covering Ruby on Rails, vanilla JavaScript, React and Redux`,
+        `Held weekly 1:1 and small group meetings to help students improve understanding`,
         `Provided portfolio project support via open office hours and 1:1 meetings`,
-        `Assessed student understanding through portfolio project reviews`
+        `Assessed student understanding through portfolio project reviews, code challenges and discussions`
       ]
     },
     {
@@ -190,8 +191,9 @@ const resumeData: CV = {
         end: `Jan 2021`
       },
       responsibilities: [
-        `Provided 1:1 support with students to solve labs and improve conceptual understanding utilizing the Socratic method`,
-        `Solved local environment issues for both iOS and Ubuntu`
+        `Provided 1:1 lab support to students through chat and video calls`,
+        `Resolved functional and test-related issues in curriculum labs`,
+        `Solved environment issues on machines using iOS and Ubuntu`
       ]
     }
   ],
